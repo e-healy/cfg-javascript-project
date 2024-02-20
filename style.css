@@ -8,15 +8,11 @@
 body {
     background-color:#f0f0f0;
 }
-  
-  /*
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(400px, 1fr));
-    padding:20px;
-    grid-gap:40px;
-  }
-  */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
   
 .product {
     width: 325px;
