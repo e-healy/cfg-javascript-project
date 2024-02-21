@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', 
+    Arial, sans-serif;
 }
   
 body {
-    background-color:#f0f0f0;
+    background-color: #f0d8e8;
 }
 
 .content-wrapper {
@@ -18,11 +19,13 @@ body {
 
 .content-wrapper h1 {
     font-size: 75px;
+    color: rgb(66, 47, 141);
     padding-bottom: 18px;
 }
 
 .content-wrapper h3 {
     font-size: 25px;
+    color: rgb(66, 47, 141);
     padding-bottom: 15px;
 }
 
@@ -39,7 +42,7 @@ body {
     background-color: #f0f0f0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 4px 2px 4px rgba(213, 28, 28, 0.2);
     transition: all 0.3s;
 }
 
@@ -55,7 +58,8 @@ body {
 }
 
 .card-content {
-    margin: 10px;
+    padding:10px;
+    margin-bottom:8px;
 }
 
 .card-title {
@@ -67,49 +71,28 @@ body {
 
 .card-title .card-btn {
     font-size: 20px;
+    background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
+.card-title .card-btn:hover {
+    transition: 0.3s;
+    color: rgb(246, 11, 11);
+
+}
+
+
 .card-title .card-header {
-    font-size: 25px;
+    font-size: 28px;
 }
 
 .card-text {
     margin-top: 5px;
     font-size: 18px;
-    /* padding: 5px; */
+    color: rgb(66, 47, 141);
+    padding: 5px;
     font-weight: bold;
-}
-  
-  
-/* .card-btn {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    border: none;
-    font-size: 28px;
-    padding: 16px;
-    margin: 5px;
-    color: red;
-   
-} */
-  
-/* .card-content {
-    padding: 16px;
-    margin-bottom: 8px;
-} */
-  
-  
-.card-content h3 {
-    font-size: 28px;
-}
-  
-.card-content p {
-    font-size: 15px;
-    color: #666;
-    line-height: 1.3;
 }
        
 #btnScrollToTop {
@@ -123,12 +106,23 @@ body {
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     border: none;
-    color: rgb(177, 2, 2);
+    color: rgb(75, 51, 172);
     cursor: pointer;
 }
 
 #btnScrollToTop:hover {
-    background: rgb(177, 2, 2);
+    background: rgb(75, 51, 172);
     color: white;
     transition: 0.5s;
+}
+
+footer {
+    border: 1px solid black;
+    background-color: rgb(66, 47, 141);
+    color: #f0f0f0;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
 }
