@@ -9,6 +9,31 @@ btnScrollToTop.addEventListener("click", function () {
 
 });
 
+document.addEventListener("DOMContentLoaded", () => 
+{
+   document.getElementById('Reset').addEventListener('click', function()
+   { const Price = 
+          document.getElementById('Price');
+          Price.value="0"
+ });
+});
+document.addEventListener("DOMContentLoaded", () => 
+{
+   document.getElementById('Reset').addEventListener('click', function()
+   { const model = 
+          document.getElementById('model');
+          model.value="0"
+ });
+});
+document.addEventListener("DOMContentLoaded", () => 
+{
+   document.getElementById('Reset').addEventListener('click', function()
+   { const make = 
+          document.getElementById('make');
+          make.value="0"
+ });
+});
+
 // document.addEventListener('DOMContentLoaded', () => {
 //     document
 //         .getElementById('make')
