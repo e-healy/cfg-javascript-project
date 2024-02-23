@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <title>Car Finance Project</title>
+        <title>CFG JS Finance Project</title>
     </head>
     
     <body>
@@ -29,7 +29,7 @@
                 <div class="content-item">
                     <label for="Make">Make</label>
                     <select name="make" id="make">
-                        <option value="0">All</option>
+                        <option value="0" selected>All</option>
                         <option value="1">Audi</option>
                         <option value="2">BMW</option>
                         <option value="3">Chrysler</option>
@@ -51,7 +51,7 @@
                  <div class="content-item">
                     <label for="Model">Model</label>
                     <select name="Model" id="model">
-                        <option value="0">Any</option>
+                        <option value="0" selected>Any</option>
 
                         <!--Audi Car Models-->
                         <optgroup label="Audi">
@@ -200,7 +200,7 @@
                 <div class="content-item">
                     <label for="">Price</label>
                     <select name="Price">
-                        <option value="0">Any</option>
+                        <option value="0" selected>Any</option>
                         <option value="1">£2000-£10000</option>
                         <option value="2">£1100-£20000</option>
                         <option value="3">£21000-£50000</option>
@@ -238,7 +238,7 @@
                     <div class="card-content">
                         <div class="card-title">
                             <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">£9095</h3>
+                            <h3 class="card-header">Price: £9095</h3>
                         </div>
                         <p class="card-text">Make: Audi</p>
                         <p class="card-text">Model: A3</p>
@@ -1247,9 +1247,9 @@
         </main>
 
         <!--Scroll to top button-->
-    <button id="btnScrollToTop">
+        <button id="btnScrollToTop">
         <i class='bx bx-up-arrow-alt'></i>
-      </button>
+        </button>
 
 
       <!--Footer-->

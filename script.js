@@ -9,4 +9,17 @@ btnScrollToTop.addEventListener("click", function () {
 
 });
 
+// document.addEventListener('DOMContentLoaded', () => {
+//     document
+//         .getElementById('make')
+//         .addEventListener('input', handleSelect);
+// });
 
+// function handleSelect(ev) {
+//     document.getElementById("make");
+//     console.log(select.value);
+//     let choices = [];
+//     for (let )
+// }
+
+// function 

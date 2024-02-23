@@ -8,6 +8,8 @@
   
 body {
     background-color: #ffe6f7;
+    min-height: 100vh;
+    /* background-color: #f5f8ff; */
 }
 
 /* Car Form */
@@ -22,18 +24,20 @@ body {
 
 .content-wrapper {
     text-align: center;
-    padding: 10px;
+    background-color: #fff;
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 1px 1px 6px rgba(213, 28, 28, 0.2);
 }
 
 .content-wrapper .car-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 40px;
-    margin: 0 80px;
-    border-radius: 6px;
-    background-color: rgb(255, 255, 255);
-}
+} 
 
 .content-wrapper h3 {
     font-size: 30px;
@@ -55,7 +59,7 @@ body {
     text-align: center;
     padding: 12px 20px;
     margin: 8px 0;
-    background-color: #ffe6f7;
+    background-color: #f0f0f0;
     border: 1px solid grey;
     border-radius: 4px;
     cursor: pointer;
@@ -70,7 +74,7 @@ body {
 .item-submit {
     display: flex;
     flex-direction: column;
-    gap: 10px; 
+    gap: 15px; 
     width: 50%;
     align-self: center;
 }
@@ -82,10 +86,16 @@ body {
     background-color: rgb(66, 47, 141);
     color: #f0d8e8;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 #Search i {
     margin-left: 5px;
+}
+
+#Search:hover {
+    transform: translate(0, -5px);
+    transition: 0.3s;
 }
 
 #Reset {
@@ -95,6 +105,12 @@ body {
     background-color: rgb(66, 47, 141);
     color: #f0d8e8; 
     cursor: pointer;
+    transition: 0.3s;
+}
+
+#Reset:hover {
+    transform: translate(0, -5px);
+    transition: 0.3s;
 }
 
 /* Car Cards Section */
@@ -119,7 +135,7 @@ body {
   
 .product {
     width: 270px;
-    background-color: #f0f0f0;
+    background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 4px 2px 4px rgba(213, 28, 28, 0.2);
