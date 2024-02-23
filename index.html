@@ -7,9 +7,12 @@
         <meta name="description" content="Car Search Online">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Antra Hagure, Elsie Wilkinson, Ellie Healy, Gema">
-        <title>Car Finance Project</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Car Finance Project</title>
     </head>
     
     <body>
@@ -25,8 +28,8 @@
                 <h3 id="title">Find your ideal vehicle</h3>
                 <div class="content-item">
                     <label for="Make">Make</label>
-                    <select id="make">
-                        <option value="0">Any</option>
+                    <select name="make" id="make">
+                        <option value="0">All</option>
                         <option value="1">Audi</option>
                         <option value="2">BMW</option>
                         <option value="3">Chrysler</option>
@@ -51,116 +54,145 @@
                         <option value="0">Any</option>
 
                         <!--Audi Car Models-->
-                        <option value="1">A3</option>
-                        <option value="2">E-tron</option>
-                        <option value="3">Q5</option>
-                        <option value="4">RS7</option>
-                        <option value="5">SQ2</option>
-                        <option value="6">TT</option>
+                        <optgroup label="Audi">
+                            <option value="1">A3</option>
+                            <option value="2">E-tron</option>
+                            <option value="3">Q5</option>
+                            <option value="4">RS7</option>
+                            <option value="5">SQ2</option>
+                            <option value="6">TT</option>
+                        </optgroup>
                         
                         <!--BMW Car Models-->
-                        <option value="7">3 Series</option>
-                        <option value="8">Alpina B8</option>
-                        <option value="9">i7</option>
-                        <option value="10">X5</option>
-                        <option value="11">M6</option>
-                        <option value="12">Z3</option>
+                        <optgroup label="BMW">
+                            <option value="7">3 Series</option>
+                            <option value="8">Alpina B8</option>
+                            <option value="9">i7</option>
+                            <option value="10">X5</option>
+                            <option value="11">M6</option>
+                            <option value="12">Z3</option>
+                        </optgroup>
                         
                         <!--Chrysler Car Models-->
-                        <option value="13">300C</option>
-                        <option value="14">Crossfire</option>
-                        <option value="15">Delta</option>
-                        <option value="16">Grand Voyager</option>
-                        <option value="17">PT Cruiser</option>
-                        <option value="18">Ypsilon</option>
+                        <optgroup label="Chrysler">
+                            <option value="13">300C</option>
+                            <option value="14">Crossfire</option>
+                            <option value="15">Delta</option>
+                            <option value="16">Grand Voyager</option>
+                            <option value="17">PT Cruiser</option>
+                            <option value="18">Ypsilon</option>
+                        </optgroup>
                         
                         <!--Ford Car Models-->
-                        <option value="19">B-Max</option>
-                        <option value="20">C-Max</option>
-                        <option value="21">Escape</option>
-                        <option value="22">Fiesta</option>
-                        <option value="23">Focus</option>
-                        <option value="24">Mustang Mach-E</option>
+                        <optgroup label="Ford">
+                            <option value="19">B-Max</option>
+                            <option value="20">C-Max</option>
+                            <option value="21">Escape</option>
+                            <option value="22">Fiesta</option>
+                            <option value="23">Focus</option>
+                            <option value="24">Mustang Mach-E</option>
+                        </optgroup>
                         
                         <!--Honda Car Models-->
-                        <option value="25">Accord</option>
-                        <option value="26">Civic</option>
-                        <option value="27">CR-X</option>
-                        <option value="28">HR-V</option>
-                        <option value="29">Jazz</option>
-                        <option value="30">ZR-V</option>
+                        <optgroup label="Honda">
+                            <option value="25">Accord</option>
+                            <option value="26">Civic</option>
+                            <option value="27">CR-X</option>
+                            <option value="28">HR-V</option>
+                            <option value="29">Jazz</option>
+                            <option value="30">ZR-V</option>
+                        </optgroup>
                         
                         <!--Hyundai Car Models-->
-                        <option value="31">Bayon</option>
-                        <option value="32">i20</option>
-                        <option value="33">i30</option>
-                        <option value="34">IONIQ</option>
-                        <option value="35">Kona</option>
-                        <option value="36">TUSCON</option>
+                        <optgroup label="Hyundai">
+                            <option value="31">Bayon</option>
+                            <option value="32">i20</option>
+                            <option value="33">i30</option>
+                            <option value="34">IONIQ</option>
+                            <option value="35">Kona</option>
+                            <option value="36">TUSCON</option>
+                        </optgroup>
                         
                         <!--Jaguar Car Models-->
-                        <option value="37">E-PACE</option>
-                        <option value="38">F-PACE</option>
-                        <option value="39">XE</option>
-                        <option value="40">XF</option>
-                        <option value="41">XKR</option>
-                        <option value="42">X-Type</option>
+                        <optgroup label="Jaguar">
+                            <option value="37">E-PACE</option>
+                            <option value="38">F-PACE</option>
+                            <option value="39">XE</option>
+                            <option value="40">XF</option>
+                            <option value="41">XKR</option>
+                            <option value="42">X-Type</option>
+                        </optgroup>
                         
                         <!--Kia Car Models-->
-                        <option value="43">Ceed</option>
-                        <option value="44">Picanto</option>
-                        <option value="45">Sportage</option>
-                        <option value="46">Stonic</option>
-                        <option value="47">Venga</option>
-                        <option value="48">XCeed</option>
+                        <optgroup label="Kia">
+                            <option value="43">Ceed</option>
+                            <option value="44">Picanto</option>
+                            <option value="45">Sportage</option>
+                            <option value="46">Stonic</option>
+                            <option value="47">Venga</option>
+                            <option value="48">XCeed</option>
+                        </optgroup>
                         
                         <!--Lexus Car Models-->
-                        <option value="49">CT</option>
-                        <option value="50">ES</option>
-                        <option value="51">IS</option>
-                        <option value="52">NX</option>
-                        <option value="53">RX</option>
-                        <option value="54">RXL</option>
+                        <optgroup label="Lexus">
+                            <option value="49">CT</option>
+                            <option value="50">ES</option>
+                            <option value="51">IS</option>
+                            <option value="52">NX</option>
+                            <option value="53">RX</option>
+                            <option value="54">RXL</option>
+                        </optgroup>
                         
                         <!--Mercedes Car Models-->
-                        <option value="55">A Class</option>
-                        <option value="56">C Class</option>
-                        <option value="57">CLA Cass</option>
-                        <option value="58">E Cass</option>
-                        <option value="59">GLA Class</option>
-                        <option value="60">GLE</option>
+                        <optgroup label="Mercedes">
+                            <option value="55">A Class</option>
+                            <option value="56">C Class</option>
+                            <option value="57">CLA Cass</option>
+                            <option value="58">E Cass</option>
+                            <option value="59">GLA Class</option>
+                            <option value="60">GLE</option>
+                        </optgroup>
                         
                         <!--Nissan Car Models-->
-                        <option value="61">ARIYA</option>
-                        <option value="62">Juke</option>
-                        <option value="63">Micra</option>
-                        <option value="64">Pulsar</option>
-                        <option value="65">Qashqai</option>
-                        <option value="66">X-Trail</option>
+                        <optgroup label="Nissan">
+                            <option value="61">ARIYA</option>
+                            <option value="62">Juke</option>
+                            <option value="63">Micra</option>
+                            <option value="64">Pulsar</option>
+                            <option value="65">Qashqai</option>
+                            <option value="66">X-Trail</option>
+                        </optgroup>
                         
                         <!--Seat Car Models-->
-                        <option value="67">Alhambra</option>
-                        <option value="68">Arona</option>
-                        <option value="69">Ateca</option>
-                        <option value="70">Ibiza</option>
-                        <option value="71">Leon</option>
-                        <option value="72">Tarraco</option>
+                        <optgroup label="Seat">
+                            <option value="67">Alhambra</option>
+                            <option value="68">Arona</option>
+                            <option value="69">Ateca</option>
+                            <option value="70">Ibiza</option>
+                            <option value="71">Leon</option>
+                            <option value="72">Tarraco</option>
+                        </optgroup>
                         
                         <!--Toyota Car Models-->
-                        <option value="73">Auris</option>
-                        <option value="74">AYGO</option>
-                        <option value="75">Corolla</option>
-                        <option value="76">Estima</option>
-                        <option value="77">PROACE Verso</option>
-                        <option value="78">Yaris Cross</option>
+                        <optgroup label="Toyota">
+                            <option value="73">Auris</option>
+                            <option value="74">AYGO</option>
+                            <option value="75">Corolla</option>
+                            <option value="76">Estima</option>
+                            <option value="77">PROACE Verso</option>
+                            <option value="78">Yaris Cross</option>
+                        </optgroup>
                         
+
                         <!--Vauxxall Car Models-->
-                        <option value="79">Astra</option>
-                        <option value="80">Crossland X</option>
-                        <option value="81">Grandland X</option>
-                        <option value="82">Mokka</option>
-                        <option value="83">Mokka X</option>
-                        <option value="84">Zafira Tourer</option>
+                        <optgroup label="Vauxhall">
+                            <option value="79">Astra</option>
+                            <option value="80">Crossland X</option>
+                            <option value="81">Grandland X</option>
+                            <option value="82">Mokka</option>
+                            <option value="83">Mokka X</option>
+                            <option value="84">Zafira Tourer</option>
+                        </optgroup>
                     </select>
                 </div>
 
@@ -177,7 +209,7 @@
                 </div>
 
                 <div class="item-submit">
-                    <button id="Search" type="submit">Search</button>
+                    <button id="Search" type="submit">Search<i class='bx bx-search-alt-2'></i></button>
                     <button id="Reset" type="reset">Reset</button>
                 </div>
              
@@ -193,7 +225,7 @@
         <main>
 
             <div class="product-title">
-                <h1>Our Cars</h1>
+                <h1>OUR CARS</h1>
             </div>
 
 
@@ -206,7 +238,7 @@
                     <div class="card-content">
                         <div class="card-title">
                             <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £9095</h3>
+                            <h3 class="card-header">£9095</h3>
                         </div>
                         <p class="card-text">Make: Audi</p>
                         <p class="card-text">Model: A3</p>
