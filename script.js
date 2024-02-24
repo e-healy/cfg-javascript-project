@@ -49,7 +49,7 @@ function populate(s1, s2){
         newOption.innerHTML = pair[1];
         s2.options.add(newOption);
     }
-}
+};
 
 document.addEventListener("DOMContentLoaded", () => 
 {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () =>
    document.getElementById('Reset').addEventListener('click', function()
    { const model = 
           document.getElementById('s2');
-          model.value=""
+          model.value="0"
  });
 });
 document.addEventListener("DOMContentLoaded", () => 
