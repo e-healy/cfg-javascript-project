@@ -8,6 +8,7 @@ btnScrollToTop.addEventListener("click", function () {
     });
 
 });
+<<<<<<< HEAD
 
 function populate(s1, s2){
     var s1 = document.getElementById(s1);
@@ -75,3 +76,5 @@ document.addEventListener("DOMContentLoaded", () =>
           make.value="0"
  });
 });
+=======
+>>>>>>> a5e3aae1f83f0a3129deb600310b47826e90ff5d
