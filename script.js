@@ -9,6 +9,7 @@ btnScrollToTop.addEventListener("click", function () {
 
 });
 
+// Alters model options by what car make you pick
 function populate(s1, s2){
     var s1 = document.getElementById(s1);
     var s2 = document.getElementById(s2);
@@ -51,27 +52,25 @@ function populate(s1, s2){
     }
 };
 
-document.addEventListener("DOMContentLoaded", () => 
-{
-   document.getElementById('Reset').addEventListener('click', function()
-   { const Price = 
-          document.getElementById('s3');
-          Price.value="0"
- });
+
+//Reset button
+const Reset = document.getElementById("Reset");
+Reset.addEventListener("click", function(){
+    document.getElementById("s1").value = "";
+    document.getElementById("s2").value = "";
+    document.getElementById("s3").value = "";
+    resultElement.textContent = '';
 });
-document.addEventListener("DOMContentLoaded", () => 
-{
-   document.getElementById('Reset').addEventListener('click', function()
-   { const model = 
-          document.getElementById('s2');
-          model.value="0"
- });
-});
-document.addEventListener("DOMContentLoaded", () => 
-{
-   document.getElementById('Reset').addEventListener('click', function()
-   { const make = 
-          document.getElementById('s1');
-          make.value="0"
- });
+
+// Search button 
+const searchBtn = document.getElementById("Search");
+const resultElement = document.getElementById("countResults");
+
+searchBtn.addEventListener("click", function(){
+    const s1 = document.getElementById("s1").value;
+    const s2 = document.getElementById("s2").value;
+    const s3 = document.getElementById("s3").value;
+
+    let result = ""; //need to figure this out!
+    resultElement.textContent = "We have " + result + " cars for you!✨";
 });
