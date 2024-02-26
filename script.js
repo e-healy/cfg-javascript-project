@@ -77,6 +77,11 @@ function handleReset() {
     document.getElementById("s2").value = 0;
     document.getElementById("s3").value = 0;
     calculate.textContent = 'Finding Cars...';
+    let products = document.querySelectorAll('.product');
+    products.forEach(product => {
+        product.style.display = 'grid';
+    })
+    
 }
 
 
@@ -106,7 +111,7 @@ function enableSingleBrand(answer) {
     const makeValue = answer.value;
 
     // Hide all product elements
-    const products = document.querySelectorAll('.product');
+    products = document.querySelectorAll('.product');
     products.forEach(product => {
         product.style.display = 'none';
     });
