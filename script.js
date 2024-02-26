@@ -25,7 +25,7 @@ function populate(s1, s2){
     s2.innerHTML = "";
 
     if(s1.value == "Audi") {
-        var optionArray = ["Any|Any", "A3|A3", "E-tron|E-tron", "Q5|Q5", "RS7|RS7", "SQ2|SQ2", "TT|TT"];
+        var optionArray = ["Any|Any", "A3|A3", "E-tron|E-tron", "Q5|Q5", "RS7|RS7", "TT|TT"];
     } else if(s1.value == "BMW") {
         var optionArray = ["Any|Any", "3 Series|3 Series", "Alpina B8|Alpina B8", "i7|i7", "X5|X5", "M6|M6", "Z3|Z3"];
     } else if(s1.value == "Chrysler") {
@@ -37,7 +37,7 @@ function populate(s1, s2){
     } else if(s1.value == "Hyundai") {
         var optionArray = ["Any|Any", "Bayon|Bayon", "i20|i20", "i30|i30", "IONIQ|IONIQ", "Kona|Kona", "TUSCON|TUSCON"];
     } else if(s1.value == "Jaguar") {
-        var optionArray = ["Any|Any", "E-PACE|E-PACE", "F-PACE0|F-PACE", "XE|XE", "XF|XF", "XKR|XKR", "X-Type|X-Type"];
+        var optionArray = ["Any|Any", "E-PACE|E-PACE", "F-PACE|F-PACE", "XE|XE", "XF|XF", "XKR|XKR", "X-Type|X-Type"];
     } else if(s1.value == "Kia") {
         var optionArray = ["Any|Any", "Ceed|Ceed", "Picanto|Picanto", "Sportage|Sportage", "Stonic|Stonic", "Venga|Venga", "XCeed|XCeed"];
     } else if(s1.value == "Lexus") {
@@ -49,9 +49,9 @@ function populate(s1, s2){
     } else if(s1.value == "Seat") {
         var optionArray = ["Any|Any", "Alhambra|Alhambra", "Arona|Arona", "Ateca|Ateca", "Ibiza|Ibiza", "Leon|Leon", "Tarraco|Tarraco"];
     } else if(s1.value == "Toyota") {
-        var optionArray = ["Any|Any", "Auris|Auris", "AYGO|AYGO", "Corolla|Corolla", "Estima|Estima", "PROACE Verso|PROACE Verso", "Yaris Cross|Yaris Cross"];
+        var optionArray = ["Any|Any", "Auris|Auris", "AYGO|AYGO", "Corolla|Corolla", "Estima|Estima", "Prius|Prius", "Land Cruiser|Land Cruiser"];
     } else if(s1.value == "Vauxhall") {
-        var optionArray = ["Any|Any", "Astra|Astra", "Crossland X|Crossland X", "Grandland X|Grandland X", "Mokka|Mokka", "Mokka X|Mokka X", "Zafira Tourer|Zafira Tourer"];
+        var optionArray = ["Any|Any", "Astra|Astra", "Grandland X|Grandland X", "Corsa|Corsa", "Mokka|Mokka", "Vivaro-e Life|Vivaro-e Life", "Crossland|Crossland"];
     }
     for (var option in optionArray){
         var pair = optionArray[option].split("|");
@@ -80,7 +80,7 @@ function handleReset() {
 }
 
 
-  function handleSelect(e) {
+function handleSelect(e) {
     let select = e.target;
     console.log(select.value); // Log the selected value
 
@@ -98,15 +98,15 @@ function handleReset() {
             default:
             break;
     }
-  }
+}
 
-  // Determine the enableSingleBrand function outside of handleSubmit
-  function enableSingleBrand(answer) {
+// Determine the enableSingleBrand function outside of handleSubmit
+function enableSingleBrand(answer) {
     console.log(answer.value);
     const makeValue = answer.value;
 
     // Hide all product elements
-    let products = document.querySelectorAll('.product');
+    const products = document.querySelectorAll('.product');
     products.forEach(product => {
         product.style.display = 'none';
     });
@@ -118,13 +118,36 @@ function handleReset() {
     });
 }
 
+// Determine the enableSingleModel function outside of handleSubmit
+function enableSingleModel(answer2) {
+    console.log(answer2.value);
+    const modelValue = answer2.value;
+
+    // Hide all product elements
+    const products = document.querySelectorAll('.product');
+    products.forEach(product => {
+        product.style.display = 'none';
+    });
+
+    // Show products for the selected make
+    const selectedModelProducts = document.querySelectorAll(`.product[data-model-type="${modelValue}"]`);
+    selectedModelProducts.forEach(product => {
+        product.style.display = 'block';
+    });
+}
+
+
+
 function handleSubmit() {
     const makeSelect = document.getElementById('s1');
     const selectedMake = makeSelect.value;
+    const modelSelect = document.getElementById('s2');
+    const selectedModel = modelSelect.value;
     calculate.textContent = 'We found these cars for you! ✨'
 
-// Call the enableSingleBrand function with the selected make
-enableSingleBrand({ value: selectedMake});
+    // Call the enableSingleBrand function with the selected make
+    enableSingleBrand({ value: selectedMake});
+    enableSingleModel({ value: selectedModel});
 }
 
 
