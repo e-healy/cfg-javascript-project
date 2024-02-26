@@ -134,13 +134,30 @@ function enableSingleModel(answer2) {
         product.style.display = 'none';
     });
 
-    // Show products for the selected make
+    // Show products for the selected model
     const selectedModelProducts = document.querySelectorAll(`.product[data-model-type="${modelValue}"]`);
     selectedModelProducts.forEach(product => {
         product.style.display = 'block';
     });
 }
 
+// Determine the enableSinglePrice function outside of handleSubmit
+// function enableSinglePrice(answer3) {
+//     console.log(answer3.value);
+//     const priceValue = answer3.value;
+
+    // Hide all product elements
+    // const products = document.querySelectorAll('.product');
+    // products.forEach(product => {
+    //     product.style.display = 'none';
+    // });
+
+    // Show products for the selected price
+//     const selectedPriceProducts = document.querySelectorAll(`.product[data-price-type="${priceValue}"]`);
+//     selectedPriceProducts.forEach(product => {
+//         product.style.display = 'block';
+//     });
+// }
 
 
 function handleSubmit() {
@@ -148,40 +165,12 @@ function handleSubmit() {
     const selectedMake = makeSelect.value;
     const modelSelect = document.getElementById('s2');
     const selectedModel = modelSelect.value;
+    // const priceSelect = document.getElementById('s3');
+    // const selectedPrice = priceSelect.value;
     calculate.textContent = 'We found these cars for you! ✨'
 
     // Call the enableSingleBrand function with the selected make
     enableSingleBrand({ value: selectedMake});
     enableSingleModel({ value: selectedModel});
+    // enableSinglePrice({ value: selectedPrice});
 }
-
-
-//Reset button
-// const Reset = document.getElementById("Reset");
-// Reset.addEventListener("click", function(){
-//     document.getElementById("s1").value = "";
-//     document.getElementById("s2").value = "";
-//     document.getElementById("s3").value = "";
-//     resultElement.textContent = '';
-// });
-
-// Search button 
-// const searchBtn = document.getElementById("Search");
-// const resultElement = document.getElementById("countResults");
-// const products = document.querySelectorAll('.product');
-
-// searchBtn.addEventListener("click", function(){
-    
-//     const s1 = document.getElementById("s1").value;
-//     const s2 = document.getElementById("s2").value;
-//     const s3 = document.getElementById("s3").value;
-
-//     let result = s1 + s2 + s3;
-//     resultElement.textContent = "We have " + result + " cars for you!✨";
-
-// products.forEach((product) => {
-//     product.style.display = 'none';
-//     });
-// });
-
-// Hide all product elements
