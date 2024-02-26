@@ -16,1261 +16,1246 @@
     </head>
     
     <body>
+        <div class="main-content-wrapper">
+            <header class="header">
+                <h1>AUTO WHIZ</h1>
+            </header>
 
-        <header class="header">
-            <h1>AUTO WHIZ</h1>
-        </header>
-        
-         <!--Form Wrapper & form starts here-->
-         <!--Car Make Option-->
-         <div class="content-wrapper">
-            <form class="car-form">
-                <h3 id="title">Find your ideal vehicle</h3>
-                <div class="content-item">
-                    <label for="Make">Make</label>
-                    <select name="s1" id="s1" onchange="populate(this.id, 's2')">
-                        <option value="0" selected>All</option>
-                        <option value="Audi">Audi</option>
-                        <option value="BMW">BMW</option>
-                        <option value="Chrysler">Chrysler</option>
-                        <option value="Ford">Ford</option>
-                        <option value="Honda">Honda</option>
-                        <option value="Hyundai">Hyundai</option>
-                        <option value="Jaguar">Jaguar</option>
-                        <option value="Kia">Kia</option>
-                        <option value="Lexus">Lexus</option>
-                        <option value="Mercedes">Mercedes</option>
-                        <option value="Nissan">Nissan</option>
-                        <option value="Seat">Seat</option>
-                        <option value="Toyota">Toyota</option>
-                        <option value="Vauxhall">Vauxhall</option>
-                      </select>
-                </div>
+            <!--Form Wrapper & form starts here-->
+            <!--Car Make Option-->
+            <div class="form-wrapper">
+                <form class="car-form" id="car-form">
+                    <h3 id="title">Find your ideal vehicle</h3>
+                    <div class="content-item">
+                        <label for="Make">Make</label>
+                        <select name="s1" id="s1" onchange="populate(this.id, 's2')" handleSelect()>
+                            <option value="0" selected>Select Make</option>
+                            <option value="Audi">Audi</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Chrysler">Chrysler</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Jaguar">Jaguar</option>
+                            <option value="Kia">Kia</option>
+                            <option value="Lexus">Lexus</option>
+                            <option value="Mercedes">Mercedes</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Seat">Seat</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Vauxhall">Vauxhall</option>
+                        </select>
+                    </div>
 
-                 <!--Car Model Option-->
-                 <div class="content-item">
-                    <label for="Model">Model</label>
-                    <select name="s2" id="s2">
-                        <option value="0">Any</option>
+                    <!--Car Model Option-->
+                    <div class="content-item">
+                        <label for="Model">Model</label>
+                        <select name="s2" id="s2" handleSelect()>
+                            <option value="0" selected id="0">Any</option>
 
-                        <!--Audi Car Models-->
-                        <!-- <optgroup label="Audi">
-                            <option value="A3">A3</option>
-                            <option value="E-tron">E-tron</option>
-                            <option value="Q5">Q5</option>
-                            <option value="RS7">RS7</option>
-                            <option value="SQ2">SQ2</option>
-                            <option value="TT">TT</option>
-                        </optgroup> -->
-                        
-                        <!--BMW Car Models-->
-                        <!-- <optgroup label="BMW">
-                            <option value="3 Series">3 Series</option>
-                            <option value="Alpina B8">Alpina B8</option>
-                            <option value="i7">i7</option>
-                            <option value="X5">X5</option>
-                            <option value="M6">M6</option>
-                            <option value="Z3">Z3</option>
-                        </optgroup> -->
-                        
-                        <!--Chrysler Car Models-->
-                        <!-- <optgroup label="Chrysler">
-                            <option value="300C">300C</option>
-                            <option value="Crossfire">Crossfire</option>
-                            <option value="Delta">Delta</option>
-                            <option value="Grand Voyager">Grand Voyager</option>
-                            <option value="PT Cruiser">PT Cruiser</option>
-                            <option value="Ypsilon">Ypsilon</option>
-                        </optgroup> -->
-                        
-                        <!--Ford Car Models-->
-                        <!-- <optgroup label="Ford">
-                            <option value="B-Max">B-Max</option>
-                            <option value="C-Max">C-Max</option>
-                            <option value="Escape">Escape</option>
-                            <option value="Fiesta">Fiesta</option>
-                            <option value="Focus">Focus</option>
-                            <option value="Mustang Mach-E">Mustang Mach-E</option>
-                        </optgroup> -->
-                        
-                        <!--Honda Car Models-->
-                        <!-- <optgroup label="Honda">
-                            <option value="Accord">Accord</option>
-                            <option value="Civic">Civic</option>
-                            <option value="CR-X">CR-X</option>
-                            <option value="HR-V">HR-V</option>
-                            <option value="Jazz">Jazz</option>
-                            <option value="ZR-V">ZR-V</option>
-                        </optgroup> -->
-                        
-                        <!--Hyundai Car Models-->
-                        <!-- <optgroup label="Hyundai">
-                            <option value="Bayon">Bayon</option>
-                            <option value="i20">i20</option>
-                            <option value="i30">i30</option>
-                            <option value="IONIQ">IONIQ</option>
-                            <option value="Kona">Kona</option>
-                            <option value="TUSCON">TUSCON</option>
-                        </optgroup> -->
-                        
-                        <!--Jaguar Car Models-->
-                        <!-- <optgroup label="Jaguar">
-                            <option value="E-PACE">E-PACE</option>
-                            <option value="F-PACE">F-PACE</option>
-                            <option value="XE">XE</option>
-                            <option value="XF">XF</option>
-                            <option value="XKR">XKR</option>
-                            <option value="X-Type">X-Type</option>
-                        </optgroup> -->
-                        
-                        <!--Kia Car Models-->
-                        <!-- <optgroup label="Kia">
-                            <option value="Ceed">Ceed</option>
-                            <option value="Picanto">Picanto</option>
-                            <option value="Sportage">Sportage</option>
-                            <option value="Stonic">Stonic</option>
-                            <option value="Venga">Venga</option>
-                            <option value="XCeed">XCeed</option>
-                        </optgroup> -->
-                        
-                        <!-- Lexus Car Models-->
-                        <!-- <optgroup label="Lexus">
-                            <option value="CT">CT</option>
-                            <option value="ES">ES</option>
-                            <option value="IS">IS</option>
-                            <option value="NX">NX</option>
-                            <option value="RX">RX</option>
-                            <option value="RXL">RXL</option>
-                        </optgroup> -->
-                        
-                        <!--Mercedes Car Models-->
-                        <!-- <optgroup label="Mercedes">
-                            <option value="A Class">A Class</option>
-                            <option value="C Class">C Class</option>
-                            <option value="CLA Class">CLA Class</option>
-                            <option value="E Class">E Class</option>
-                            <option value="GLA Class">GLA Class</option>
-                            <option value="GLE">GLE</option>
-                        </optgroup> -->
-                        
-                        <!--Nissan Car Models-->
-                        <!-- <optgroup label="Nissan">
-                            <option value="ARIYA">ARIYA</option>
-                            <option value="Juke">Juke</option>
-                            <option value="Micra">Micra</option>
-                            <option value="Pulsar">Pulsar</option>
-                            <option value="Qashqai">Qashqai</option>
-                            <option value="X-Trail">X-Trail</option>
-                        </optgroup>
-                         -->
-                        <!--Seat Car Models-->
-                        <!-- <optgroup label="Seat">
-                            <option value="Alhambra">Alhambra</option>
-                            <option value="Arona">Arona</option>
-                            <option value="Ateca">Ateca</option>
-                            <option value="Ibiza">Ibiza</option>
-                            <option value="Leon">Leon</option>
-                            <option value="Tarraco">Tarraco</option>
-                        </optgroup> -->
-                        
-                        <!--Toyota Car Models-->
-                        <!-- <optgroup label="Toyota">
-                            <option value="Auris">Auris</option>
-                            <option value="AYGO">AYGO</option>
-                            <option value="Corolla">Corolla</option>
-                            <option value="Estima">Estima</option>
-                            <option value="PROACE Verso">PROACE Verso</option>
-                            <option value="Yaris Cross">Yaris Cross</option>
-                        </optgroup> -->
-                        
+                            <!--Audi Car Models-->
+                            <optgroup label="Audi" id="Audi">
+                                <option value="A3" id="1">A3</option>
+                                <option value="E-tron" id="2">E-tron</option>
+                                <option value="Q5" id="3">Q5</option>
+                                <option value="RS7" id="4">RS7</option>
+                                <option value="SQ2" id="5">SQ2</option>
+                                <option value="TT" id="6">TT</option>
+                            </optgroup>
+                            
+                            <!--BMW Car Models-->
+                            <optgroup label="BMW" id="BMW">
+                                <option value="3 Series" id="7">3 Series</option>
+                                <option value="Alpina B8" id="8">Alpina B8</option>
+                                <option value="i7" id="9">i7</option>
+                                <option value="X5" id="10">X5</option>
+                                <option value="M6" id="11">M6</option>
+                                <option value="Z3" id="12">Z3</option>
+                            </optgroup>
+                            
+                            <!--Chrysler Car Models-->
+                            <optgroup label="Chrysler" id="Chrysler">
+                                <option value="300C" id="13">300C</option>
+                                <option value="Crossfire" id="14">Crossfire</option>
+                                <option value="Delta" id="15">Delta</option>
+                                <option value="Grand Voyager" id="16">Grand Voyager</option>
+                                <option value="PT Cruiser" id="17">PT Cruiser</option>
+                                <option value="Ypsilon" id="18">Ypsilon</option>
+                            </optgroup>
+                            
+                            <!--Ford Car Models-->
+                            <optgroup label="Ford" id="Ford">
+                                <option value="B-Max" id="19">B-Max</option>
+                                <option value="C-Max" id="20">C-Max</option>
+                                <option value="Escape" id="21">Escape</option>
+                                <option value="Fiesta" id="22">Fiesta</option>
+                                <option value="Focus" id="23">Focus</option>
+                                <option value="Mustang Mach-E" id="24">Mustang Mach-E</option>
+                            </optgroup>
+                            
+                            <!--Honda Car Models-->
+                            <optgroup label="Honda" id="Honda">
+                                <option value="Accord" id="24">Accord</option>
+                                <option value="Civic" id="25">Civic</option>
+                                <option value="CR-X" id="26">CR-X</option>
+                                <option value="HR-V" id="27">HR-V</option>
+                                <option value="Jazz" id="28">Jazz</option>
+                                <option value="ZR-V" id="29">ZR-V</option>
+                            </optgroup>
+                            
+                            <!--Hyundai Car Models-->
+                            <optgroup label="Hyundai" id="Hyundai">
+                                <option value="Bayon" id="30">Bayon</option>
+                                <option value="i20" id="31">i20</option>
+                                <option value="i30" id="32">i30</option>
+                                <option value="IONIQ" id="33">IONIQ</option>
+                                <option value="Kona" id="34">Kona</option>
+                                <option value="TUSCON" id="35">TUSCON</option>
+                            </optgroup>
+                            
+                            <!--Jaguar Car Models-->
+                            <optgroup label="Jaguar" id="Jaguar">
+                                <option value="E-PACE" id="36">E-PACE</option>
+                                <option value="F-PACE" id="37">F-PACE</option>
+                                <option value="XE" id="38">XE</option>
+                                <option value="XF" id="39">XF</option>
+                                <option value="XKR" id="40">XKR</option>
+                                <option value="X-Type" id="41">X-Type</option>
+                            </optgroup>
+                            
+                            <!--Kia Car Models-->
+                            <optgroup label="Kia" id="Kia">
+                                <option value="Ceed" id="42">Ceed</option>
+                                <option value="Picanto" id="43">Picanto</option>
+                                <option value="Sportage" id="44">Sportage</option>
+                                <option value="Stonic" id="45">Stonic</option>
+                                <option value="Venga" id="46">Venga</option>
+                                <option value="XCeed" id="47">XCeed</option>
+                            </optgroup>
+                            
+                            <!-- Lexus Car Models-->
+                            <optgroup label="Lexus" id="Lexus">
+                                <option value="CT" id="48">CT</option>
+                                <option value="ES" id="49">ES</option>
+                                <option value="IS" id="50">IS</option>
+                                <option value="NX" id="51">NX</option>
+                                <option value="RX" id="52">RX</option>
+                                <option value="RXL" id="53">RXL</option>
+                            </optgroup>
+                            
+                            <!--Mercedes Car Models-->
+                            <optgroup label="Mercedes" id="Mercedes">
+                                <option value="A Class" id="54">A Class</option>
+                                <option value="C Class" id="55">C Class</option>
+                                <option value="CLA Class" id="56">CLA Class</option>
+                                <option value="E Class" id="57">E Class</option>
+                                <option value="GLA Class" id="58">GLA Class</option>
+                                <option value="GLE" id="59">GLE</option>
+                            </optgroup>
+                            
+                            <!--Nissan Car Models-->
+                            <optgroup label="Nissan" id="Nissan">
+                                <option value="ARIYA" id="60">ARIYA</option>
+                                <option value="Juke" id="61">Juke</option>
+                                <option value="Micra" id="62">Micra</option>
+                                <option value="Pulsar" id="63">Pulsar</option>
+                                <option value="Qashqai" id="64">Qashqai</option>
+                                <option value="X-Trail" id="65">X-Trail</option>
+                            </optgroup>
 
-                        <!--Vauxxall Car Models-->
-                        <!-- <optgroup label="Vauxhall">
-                            <option value="Astra">Astra</option>
-                            <option value="Crossland X">Crossland X</option>
-                            <option value="Grandland X">Grandland X</option>
-                            <option value="Mokka">Mokka</option>
-                            <option value="Mokka X">Mokka X</option>
-                            <option value="Zafira Tourer">Zafira Tourer</option>
-                        </optgroup> -->
-                    </select>
-                </div>
+                            <!--Seat Car Models-->
+                            <optgroup label="Seat" id="Seat">
+                                <option value="Alhambra" id="66">Alhambra</option>
+                                <option value="Arona" id="67">Arona</option>
+                                <option value="Ateca" id="68">Ateca</option>
+                                <option value="Ibiza" id="69">Ibiza</option>
+                                <option value="Leon" id="70">Leon</option>
+                                <option value="Tarraco" id="71">Tarraco</option>
+                            </optgroup>
+                            
+                            <!--Toyota Car Models-->
+                            <optgroup label="Toyota" id="Toyota">
+                                <option value="Auris" id="72">Auris</option>
+                                <option value="AYGO" id="73">AYGO</option>
+                                <option value="Corolla" id="74">Corolla</option>
+                                <option value="Estima" id="75">Estima</option>
+                                <option value="PROACE Verso" id="76">PROACE Verso</option>
+                                <option value="Yaris Cross" id="77">Yaris Cross</option>
+                            </optgroup>
+                            
 
-                 <!--Car Price Option-->
-                <div class="content-item">
-                    <label for="Price">Max Total Price</label>
-                    <select name="s3" id="s3">
-                        <option value="0" selected>Any</option>
-                        <option value="5000">£5,000</option>
-                        <option value="10000">£10,000</option>
-                        <option value="15000">£15,000</option>
-                        <option value="20000">£20,000</option>
-                        <option value="25000">£25,000</option>
-                        <option value="30000">£30,000</option>
-                        <option value="35000">£35,000</option>
-                        <option value="40000">£40,000</option>
-                        <option value="45000">£45,000</option>
-                        <option value="50000">£50,000</option>
-                        <option value="51000">£51,000+</option>
-                    </select>
-                </div>
+                            <!--Vauxxall Car Models-->
+                            <optgroup label="Vauxhall" id="Vauxhall">
+                                <option value="Astra" id="78">Astra</option>
+                                <option value="Crossland X" id="79">Crossland X</option>
+                                <option value="Grandland X" id="80">Grandland X</option>
+                                <option value="Mokka" id="81">Mokka</option>
+                                <option value="Mokka X" id="82">Mokka X</option>
+                                <option value="Zafira Tourer" id="83">Zafira Tourer</option>
+                            </optgroup>
+                        </select>
+                    </div>
 
-                <!-- <div class="item-submit">
-                    <input type="button" value="Search" name="Search" id="Search">
-                    <input type="button" value="Reset" name="reset" id="Reset">
-                </div> -->
+                    <!--Car Price Option-->
+                    <div class="content-item">
+                        <label for="Price">Total Price</label>
+                        <select name="s3" id="s3" handleSelect()>
+                            <option value="0" selected id="0">Any</option>
+                            <option value="£2000-£10000" id="1">£2000-£10000</option>
+                            <option value="£10000-£20000" id="2">£11000-£20000</option>
+                            <option value="£20000-£50000" id="3">£21000-£50000</option>
+                            <option value="£50000+" id="4">£50000+</option>
+                        </select>
+                    </div>
 
-                
+                    <!--Form buttons - Submit and Reset-->
+                    <div class="form-btns">
+                        <input type="button" value="Submit" name="Search" id="Search" onclick="handleSubmit()">
+                        <input type="button" value="Reset" name="reset" id="Reset" onclick="handleReset()">
+                    </div>
+                </form>
 
-                <div class="item-submit">
-                    <button id="Search" type="submit">Search<i class='bx bx-search-alt-2'></i></button>
-                    <button id="Reset" type="reset">Reset</button>
-                </div>
-             
-           
-                <div class="countResults" id="countResults">
-                    <!-- <p>We found X amount of <b id="count"></b>cars for you!</p> -->
-                </div>
-            </form>
-         </div>
-        
-       
-        <!--Product Section-->
-        <main>
+                <div class="resultCalculated" id="calculate"><p>Finding Cars...</p></div>
 
-            <div class="product-title">
-                <h1>OUR CARS</h1>
-                <p>Explore some of our cars you might like</p>
+                <!-- <div class="resultCalculated">We found <b id="calculate">these cars</b> for you!</div> -->
             </div>
 
-
-            <div class="grid">
-
-                <!--Audi Products-->
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Audi_A3_9095_i.jpg" alt="Audi A3"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £9095</h3>
-                        </div>
-                        <p class="card-text">Make: Audi</p>
-                        <p class="card-text">Model: A3</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Audi_E_tron_35000.jpg" alt="Audi Etron"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £35000</h3>
-                        </div>
-                        <p class="card-text">Make: Audi</p>
-                        <p class="card-text">Model: E-tron</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Audi_Q5_33995.jpg" alt="Audi Q5"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £33995</h3>
-                        </div>
-                        <p class="card-text">Make: Audi</p>
-                        <p class="card-text">Model: Q5</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Audi_Rs7_37450.jpg" alt="Audi RS7"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £37450</h3>
-                        </div>
-                        <p class="card-text">Make: Audi</p>
-                        <p class="card-text">Model: RS7</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Audi_TT_24990.jpg" alt="Audi TT"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £19000</h3>
-                        </div>
-                        <p class="card-text">Make: Audi</p>
-                        <p class="card-text">Model: TT</p>
-                    </div>
-                </div>
-
-                <!--BMW Products-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/BMW_z3_7950.jpg" alt="BMW Z3"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £7500</h3>
-                        </div>
-                        <p class="card-text">Make: BMW</p>
-                        <p class="card-text">Model: Z3</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_BMW_M6_12995.jpg" alt="BMW M6"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £12995</h3>
-                        </div>
-                        <p class="card-text">Make: BMW</p>
-                        <p class="card-text">Model: M6</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_BMW_x5_48995.jpg" alt="BMW X5"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £48995</h3>
-                        </div>
-                        <p class="card-text">Make: BMW</p>
-                        <p class="card-text">Model: X5</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/BMW_i7_118355.jpg" alt="BMW i7"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £118355</h3>
-                        </div>
-                        <p class="card-text">Make: BMW</p>
-                        <p class="card-text">Model: i7</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_BMW_alpina_22995.jpg" alt="BMW Alpina"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £22995</h3>
-                        </div>
-                        <p class="card-text">Make: BMW</p>
-                        <p class="card-text">Model: Alpina</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_BMW_3_series_10395.jpg" alt="BMW 3 Series"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £10395</h3>
-                        </div>
-                        <p class="card-text">Make: BMW</p>
-                        <p class="card-text">Model: 3 Series</p>
-                    </div>
-                </div>
-
-
-                <!--Chrysler Car Models-->
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_Chrysler_300C_8995.jpg" alt="Chrysler 300C"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £8995</h3>
-                        </div>
-                        <p class="card-text">Make: Chrysler</p>
-                        <p class="card-text">Model: 300C</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Chrysler_crossfire_7500.jpg" alt="Chrysler Crossfire"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £7500</h3>
-                        </div>
-                        <p class="card-text">Make: Chrysler</p>
-                        <p class="card-text">Model: Crossfire</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Chrysler_Delta_3899.jpg" alt="Chrysler Delta"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £3899</h3>
-                        </div>
-                        <p class="card-text">Make: Chrysler</p>
-                        <p class="card-text">Model: Delta</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Chrysler_voyager_2495.jpg" alt="Chrysler Voyager"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £2495</h3>
-                        </div>
-                        <p class="card-text">Make: Chrysler</p>
-                        <p class="card-text">Model: Voyager</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Chrysler_PT_Cruiser_2250.jpg" alt="Chrysler PT Cruiser"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £2250</h3>
-                        </div>
-                        <p class="card-text">Make: Chrysler</p>
-                        <p class="card-text">Model: PT Cruiser</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Chrysler_ypsilon_2390.jpg" alt="Chrysler Ypsilon"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £2390</h3>
-                        </div>
-                        <p class="card-text">Make: Chrysler</p>
-                        <p class="card-text">Model: Ypsilon</p>
-                    </div>
-                </div>
-
-                <!--Ford Car Models-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_Ford_B_Max_4490.jpg" alt="Ford B Max"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £4490</h3>
-                        </div>
-                        <p class="card-text">Make: Ford</p>
-                        <p class="card-text">Model: B Max</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_Ford_c_Max_8399.jpg" alt="Ford C Max"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £8399</h3>
-                        </div>
-                        <p class="card-text">Make: Ford</p>
-                        <p class="card-text">Model: C Max</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_Ford-Escape_4800.jpg" alt="Ford Escape"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £4800</h3>
-                        </div>
-                        <p class="card-text">Make: Ford</p>
-                        <p class="card-text">Model: Escape</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Ford_Fiesta_8694.jpg" alt="Ford Fiesta"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £8694</h3>
-                        </div>
-                        <p class="card-text">Make: Ford</p>
-                        <p class="card-text">Model: Fiesta</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Ford_focus_13500.jpg" alt="Ford Focus"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £13500</h3>
-                        </div>
-                        <p class="card-text">Make: Ford</p>
-                        <p class="card-text">Model: Focus</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Ford_Mustang_21989.jpg" alt="Ford Mustang"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £21989</h3>
-                        </div>
-                        <p class="card-text">Make: Ford</p>
-                        <p class="card-text">Model: Mustang</p>
-                    </div>
-                </div>
-
-                <!--Honda Car Models-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Honda_accord_9425.jpg" alt="Honda Accord"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £9425</h3>
-                        </div>
-                        <p class="card-text">Make: Honda</p>
-                        <p class="card-text">Model: Accord</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Honda_Civic_54950.jpg" alt="Honda Civic"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £28000</h3>
-                        </div>
-                        <p class="card-text">Make: Honda</p>
-                        <p class="card-text">Model: Civic</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Honda_CR_x_9999.jpg" alt="Honda CR-X"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £9999</h3>
-                        </div>
-                        <p class="card-text">Make: Honda</p>
-                        <p class="card-text">Model: CR-X</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Honda_HR_V_37270.jpg" alt="Honda HR-V"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £37270</h3>
-                        </div>
-                        <p class="card-text">Make: Honda</p>
-                        <p class="card-text">Model: HR-V</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Honda_jazz_29125.jpg" alt="Honda Jazz"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £29125</h3>
-                        </div>
-                        <p class="card-text">Make: Honda</p>
-                        <p class="card-text">Model: Jazz</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Honda_ZR_V_39495.jpg" alt="Honda ZR-V"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £39495</h3>
-                        </div>
-                        <p class="card-text">Make: Honda</p>
-                        <p class="card-text">Model: ZR-V</p>
-                    </div>
-                </div>
-
-                <!--Hyundai Car Models-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Hyundai_bayon_22420.jpg" alt="Hyundai Bayon"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £22420</h3>
-                        </div>
-                        <p class="card-text">Make: Hyundai</p>
-                        <p class="card-text">Model: Bayon</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Hyundai_I_20_27030.jpg" alt="Hyundai i-20"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £27030</h3>
-                        </div>
-                        <p class="card-text">Make: Hyundai</p>
-                        <p class="card-text">Model: i-20</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_Hyundai_i_30_32995.jpg" alt="Hyundai i-30"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £32995</h3>
-                        </div>
-                        <p class="card-text">Make: Hyundai</p>
-                        <p class="card-text">Model: i-30</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Hyundai_IONIQ_14990.jpg" alt="Hyundai IONIQ"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £14990</h3>
-                        </div>
-                        <p class="card-text">Make: Hyundai</p>
-                        <p class="card-text">Model: IONIQ</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Hyunday_KONa_25495.jpg" alt="Hyundai KONA"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £25495</h3>
-                        </div>
-                        <p class="card-text">Make: Hyundai</p>
-                        <p class="card-text">Model: KONA</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Hyundai_TUSCON_8500.jpg" alt="Hyundai TUSCON"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £8500</h3>
-                        </div>
-                        <p class="card-text">Make: Hyundai</p>
-                        <p class="card-text">Model: TUSCON</p>
-                    </div>
-                </div>
-
-                <!--Jaguar Car Models-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Jaguar_E_pace_9989.jpg" alt="Jaguar E-PACE"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £9989</h3>
-                        </div>
-                        <p class="card-text">Make: Jaguar</p>
-                        <p class="card-text">Model: E-PACE</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Jaguar_xe_3500.jpg" alt="Jaguar XE"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £3500</h3>
-                        </div>
-                        <p class="card-text">Make: Jaguar</p>
-                        <p class="card-text">Model: XE</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Jaguar_xf_52430.jpg" alt="Jaguar XF"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £52430</h3>
-                        </div>
-                        <p class="card-text">Make: Jaguar</p>
-                        <p class="card-text">Model: XF</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Jaguar_F_PACE_10990.jpg" alt="Jaguar F-Pace"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £10990</h3>
-                        </div>
-                        <p class="card-text">Make: Jaguar</p>
-                        <p class="card-text">Model: F-Pace</p>
-                    </div>
-                </div>
-                
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Jaguar_XKR_8450.jpg" alt="Jaguar XKR"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £8450</h3>
-                        </div>
-                        <p class="card-text">Make: Jaguar</p>
-                        <p class="card-text">Model: XKR</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_Jaguar_x_type_4495.jpg" alt="Jaguar X-Type"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £4495</h3>
-                        </div>
-                        <p class="card-text">Make: Jaguar</p>
-                        <p class="card-text">Model: X-Type</p>
-                    </div>
-                </div>
-
-                <!--Kia Car Models-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/KIA_Ceed_2225.jpg" alt="KIA Ceed"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £2225</h3>
-                        </div>
-                        <p class="card-text">Make: KIA</p>
-                        <p class="card-text">Model: Ceed</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/KIA_picanto_2100.jpg" alt="KIA Picanto"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £2100</h3>
-                        </div>
-                        <p class="card-text">Make: KIA</p>
-                        <p class="card-text">Model: Picanto</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/KIA_Sportage_41995.jpg" alt="KIA Sportage"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £41995</h3>
-                        </div>
-                        <p class="card-text">Make: KIA</p>
-                        <p class="card-text">Model: Sportage</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/KIA_stonic_26375.jpg" alt="KIA Stonic"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £26375</h3>
-                        </div>
-                        <p class="card-text">Make: KIA</p>
-                        <p class="card-text">Model: Stonic</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/KIA_Venga_11995.jpg" alt="KIA Venga"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £11995</h3>
-                        </div>
-                        <p class="card-text">Make: KIA</p>
-                        <p class="card-text">Model: Venga</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/KIA_xceed_13750.jpg" alt="KIA XCeed"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £13750</h3>
-                        </div>
-                        <p class="card-text">Make: KIA</p>
-                        <p class="card-text">Model: XCeed</p>
-                    </div>
-                </div>
-
-                <!--Lexus Car Models-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_Lexus_CT_6795.jpg" alt="Lexus CT"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £6795</h3>
-                        </div>
-                        <p class="card-text">Make: Lexus</p>
-                        <p class="card-text">Model: CT</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Lexus_es_20430.jpg" alt="Lexus ES"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £20430</h3>
-                        </div>
-                        <p class="card-text">Make: Lexus</p>
-                        <p class="card-text">Model: ES</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Lexus_IS_2289.jpg" alt="Lexus IS"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £2289</h3>
-                        </div>
-                        <p class="card-text">Make: Lexus</p>
-                        <p class="card-text">Model: IS</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Lexus_nx_13490.jpg" alt="Lexus NX"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £13490</h3>
-                        </div>
-                        <p class="card-text">Make: Lexus</p>
-                        <p class="card-text">Model: NX</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Lexus_RX_51419.jpg" alt="Lexus RX"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £51419</h3>
-                        </div>
-                        <p class="card-text">Make: Lexus</p>
-                        <p class="card-text">Model: RX</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Lexus_rxl_41710.jpg" alt="Lexus RXL"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £41710</h3>
-                        </div>
-                        <p class="card-text">Make: Lexus</p>
-                        <p class="card-text">Model: RXL</p>
-                    </div>
-                </div>
-
-                <!--Mercedes Car Models-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Mercedes_A_Class_3700.jpg" alt="Mercedes A Class"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £3700</h3>
-                        </div>
-                        <p class="card-text">Make: Mercedes</p>
-                        <p class="card-text">Model: A Class</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Mercedes_c_class_38495.jpg" alt="Mercedes C Class"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £38495</h3>
-                        </div>
-                        <p class="card-text">Make: Mercedes</p>
-                        <p class="card-text">Model: C Class</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Mercedes_CLA_Class_33253.jpg" alt="Mercedes CLA Class"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £33253</h3>
-                        </div>
-                        <p class="card-text">Make: Mercedes</p>
-                        <p class="card-text">Model: CLA Class</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Mercedes_e_class_88995.jpg" alt="Mercedes E Class"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £88995</h3>
-                        </div>
-                        <p class="card-text">Make: Mercedes</p>
-                        <p class="card-text">Model: E Class</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Mercedes_GLA_14999.jpg" alt="Mercedes GLA"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £14999</h3>
-                        </div>
-                        <p class="card-text">Make: Mercedes</p>
-                        <p class="card-text">Model: GLA</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_Mercedes_gle_59000.jpg" alt="Mercedes GLE"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £59000</h3>
-                        </div>
-                        <p class="card-text">Make: Mercedes</p>
-                        <p class="card-text">Model: GLE</p>
-                    </div>
-                </div>
-
-                <!--Nissan Car Models-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Nissan_ARIYA_36950.jpg" alt="Nissan ARIYA"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £36950</h3>
-                        </div>
-                        <p class="card-text">Make: Nissan</p>
-                        <p class="card-text">Model: ARIYA</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Nissan_juke_3395.jpg" alt="Nissan Juke"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £3395</h3>
-                        </div>
-                        <p class="card-text">Make: Nissan</p>
-                        <p class="card-text">Model: Juke</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Nissan_Micra_13995.jpg" alt="Nissan Micra"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £3395</h3>
-                        </div>
-                        <p class="card-text">Make: Nissan</p>
-                        <p class="card-text">Model: Micra</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_Nissan_pulsar_20200.jpg" alt="Nissan Pulsar"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £20200</h3>
-                        </div>
-                        <p class="card-text">Make: Nissan</p>
-                        <p class="card-text">Model: Pulsar</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Nissan_qashqai_37495.jpg" alt="Nissan Qashqai"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £37495</h3>
-                        </div>
-                        <p class="card-text">Make: Nissan</p>
-                        <p class="card-text">Model: Qashqai</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Nissan_xtrail_40095.jpg" alt="Nissan X-Trail"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £40095</h3>
-                        </div>
-                        <p class="card-text">Make: Nissan</p>
-                        <p class="card-text">Model: X-Trail</p>
-                    </div>
-                </div>
-
-                <!--Seat Car Models-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/SEAT_alhambra_3299.jpg" alt="SEAT Alhambra"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £3299</h3>
-                        </div>
-                        <p class="card-text">Make: SEAT</p>
-                        <p class="card-text">Model: Alhambra</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/SEAT_Arona_6990.jpg" alt="SEAT Arona"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £6990</h3>
-                        </div>
-                        <p class="card-text">Make: SEAT</p>
-                        <p class="card-text">Model: Arona</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/SEAT_ateca_29950.jpg" alt="SEAT Ateca"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £29950</h3>
-                        </div>
-                        <p class="card-text">Make: SEAT</p>
-                        <p class="card-text">Model: Ateca</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/SEAT_Ibiza_13995.jpg" alt="SEAT Ibiza"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £13995</h3>
-                        </div>
-                        <p class="card-text">Make: SEAT</p>
-                        <p class="card-text">Model: Ibiza</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_SEAT_leon_21495.jpg" alt="SEAT Leon"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £21495</h3>
-                        </div>
-                        <p class="card-text">Make: SEAT</p>
-                        <p class="card-text">Model: Leon</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/SEAT_tarraco_33995.jpg" alt="SEAT Tarraco"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £33995</h3>
-                        </div>
-                        <p class="card-text">Make: SEAT</p>
-                        <p class="card-text">Model: Tarraco</p>
-                    </div>
-                </div>
-
-                <!--Toyota Car Models-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_Toyota_Auris_9989.jpg" alt="Toyota Auris"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £9989</h3>
-                        </div>
-                        <p class="card-text">Make: Toyota</p>
-                        <p class="card-text">Model: Auris</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Toyota_aygo_12987.jpg" alt="Toyota AYGO"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £12987</h3>
-                        </div>
-                        <p class="card-text">Make: Toyota</p>
-                        <p class="card-text">Model: AYGO</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Toyota_Corolla_29995.jpg" alt="Toyota Corolla"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £29995</h3>
-                        </div>
-                        <p class="card-text">Make: Toyota</p>
-                        <p class="card-text">Model: Corolla</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Toyota_estima_6495.jpg" alt="Toyota Estima"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £6495</h3>
-                        </div>
-                        <p class="card-text">Make: Toyota</p>
-                        <p class="card-text">Model: Estima</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Toyota_Prius_23450.jpg" alt="Toyota Prius"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £23450</h3>
-                        </div>
-                        <p class="card-text">Make: Toyota</p>
-                        <p class="card-text">Model: Prius</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Toyota_land_cruiser_57999.jpg" alt="Toyota Land Cruiser"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £57999</h3>
-                        </div>
-                        <p class="card-text">Make: Toyota</p>
-                        <p class="card-text">Model: Land Cruiser</p>
-                    </div>
-                </div>
-
-                <!--Vauxxall Car Models-->
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Vauxhall_astra_26444.jpg" alt="Vauxhall Astra"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £26444</h3>
-                        </div>
-                        <p class="card-text">Make: Vauxhall</p>
-                        <p class="card-text">Model: Astra</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/thumbnail_Vauxhall_grandland_x_19249.jpg" alt="Vauxhall Grandland X"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £19249</h3>
-                        </div>
-                        <p class="card-text">Make: Vauxhall</p>
-                        <p class="card-text">Model: Grandland X</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Vauxhall_Corsa_2995.jpg" alt="Vauxhall Corsa"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £2995</h3>
-                        </div>
-                        <p class="card-text">Make: Vauxhall</p>
-                        <p class="card-text">Model: Corsa</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Vauxhall_Mokka_8265.jpg" alt="Vauxhall Mokka"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £8265</h3>
-                        </div>
-                        <p class="card-text">Make: Vauxhall</p>
-                        <p class="card-text">Model: Mokka</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Vauxhall _vivaro-e_life_42950.jpg" alt="Vauxhall Vivaro-e Life"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £42950</h3>
-                        </div>
-                        <p class="card-text">Make: Vauxhall</p>
-                        <p class="card-text">Model: Vivaro-e Life</p>
-                    </div>
-                </div>
-
-                <div class="product" id="product">
-                    <img class="card-img" src="./img/Vauxhall_Crossland_16350.jpg" alt="Vauxhall Crossland"/>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
-                            <h3 class="card-header">Price: £16350</h3>
-                        </div>
-                        <p class="card-text">Make: Vauxhall</p>
-                        <p class="card-text">Model: Crossland</p>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!--Scroll to top button-->
-        <button id="btnScrollToTop">
-        <i class='bx bx-up-arrow-alt'></i>
-        </button>
-
-
-      <!--Footer-->
-        <footer>
-            <p>All Rights Reserved @Auto Whiz 2024</p>
-        </footer>
+            <!-- Product Section-->
+            <main>
+
+                <div class="product-title">
+                    <h1>OUR CARS</h1>
+                    <p>Explore some of our cars you might like</p>
+                </div>
+    
+    
+                <div class="grid">
+    
+                    <!--Audi Products-->
+    
+                    <div class="product" id="product" data-make="Audi">
+                        <img class="card-img" src="./img/Audi_A3_9095_i.jpg" alt="Audi A3"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £9095</h3>
+                            </div>
+                            <p class="card-text">Make: Audi</p>
+                            <p class="card-text">Model: A3</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Audi" data-make="Audi">
+                        <img class="card-img" src="./img/Audi_E_tron_35000.jpg" alt="Audi Etron"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £35000</h3>
+                            </div>
+                            <p class="card-text">Make: Audi</p>
+                            <p class="card-text">Model: E-tron</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Audi" data-make="Audi">
+                        <img class="card-img" src="./img/Audi_Q5_33995.jpg" alt="Audi Q5"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £33995</h3>
+                            </div>
+                            <p class="card-text">Make: Audi</p>
+                            <p class="card-text">Model: Q5</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Audi" data-make="Audi">
+                        <img class="card-img" src="./img/Audi_Rs7_37450.jpg" alt="Audi RS7"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £37450</h3>
+                            </div>
+                            <p class="card-text">Make: Audi</p>
+                            <p class="card-text">Model: RS7</p>
+                        </div>
+                    </div>
+    
+                    <div class="product " id="product Audi" data-make="Audi">
+                        <img class="card-img" src="./img/Audi_TT_24990.jpg" alt="Audi TT"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £19000</h3>
+                            </div>
+                            <p class="card-text">Make: Audi</p>
+                            <p class="card-text">Model: TT</p>
+                        </div>
+                    </div>
+    
+                    <!--BMW Products-->
+                    <div class="product" id="product BMW" data-make="BMW">
+                        <img class="card-img" src="./img/BMW_z3_7950.jpg" alt="BMW Z3"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £7500</h3>
+                            </div>
+                            <p class="card-text">Make: BMW</p>
+                            <p class="card-text">Model: Z3</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product BMW" data-make="BMW">
+                        <img class="card-img" src="./img/thumbnail_BMW_M6_12995.jpg" alt="BMW M6"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £12995</h3>
+                            </div>
+                            <p class="card-text">Make: BMW</p>
+                            <p class="card-text">Model: M6</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product BMW" data-make="BMW">
+                        <img class="card-img" src="./img/thumbnail_BMW_x5_48995.jpg" alt="BMW X5"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £48995</h3>
+                            </div>
+                            <p class="card-text">Make: BMW</p>
+                            <p class="card-text">Model: X5</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product BMW" data-make="BMW">
+                        <img class="card-img" src="./img/BMW_i7_118355.jpg" alt="BMW i7"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £118355</h3>
+                            </div>
+                            <p class="card-text">Make: BMW</p>
+                            <p class="card-text">Model: i7</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product BMW" data-make="BMW">
+                        <img class="card-img" src="./img/thumbnail_BMW_alpina_22995.jpg" alt="BMW Alpina"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £22995</h3>
+                            </div>
+                            <p class="card-text">Make: BMW</p>
+                            <p class="card-text">Model: Alpina</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product BMW" data-make="BMW">
+                        <img class="card-img" src="./img/thumbnail_BMW_3_series_10395.jpg" alt="BMW 3 Series"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £10395</h3>
+                            </div>
+                            <p class="card-text">Make: BMW</p>
+                            <p class="card-text">Model: 3 Series</p>
+                        </div>
+                    </div>
+    
+    
+                    <!--Chrysler Car Models-->
+    
+                    <div class="product" id="product Chrysler" data-make="Chrysler">
+                        <img class="card-img" src="./img/thumbnail_Chrysler_300C_8995.jpg" alt="Chrysler 300C"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £8995</h3>
+                            </div>
+                            <p class="card-text">Make: Chrysler</p>
+                            <p class="card-text">Model: 300C</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Chrysler" data-make="Chrysler">
+                        <img class="card-img" src="./img/Chrysler_crossfire_7500.jpg" alt="Chrysler Crossfire"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £7500</h3>
+                            </div>
+                            <p class="card-text">Make: Chrysler</p>
+                            <p class="card-text">Model: Crossfire</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Chrysler" data-make="Chrysler">
+                        <img class="card-img" src="./img/Chrysler_Delta_3899.jpg" alt="Chrysler Delta"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £3899</h3>
+                            </div>
+                            <p class="card-text">Make: Chrysler</p>
+                            <p class="card-text">Model: Delta</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Chrysler" data-make="Chrysler">
+                        <img class="card-img" src="./img/Chrysler_voyager_2495.jpg" alt="Chrysler Voyager"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £2495</h3>
+                            </div>
+                            <p class="card-text">Make: Chrysler</p>
+                            <p class="card-text">Model: Voyager</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Chrysler" data-make="Chrysler">
+                        <img class="card-img" src="./img/Chrysler_PT_Cruiser_2250.jpg" alt="Chrysler PT Cruiser"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £2250</h3>
+                            </div>
+                            <p class="card-text">Make: Chrysler</p>
+                            <p class="card-text">Model: PT Cruiser</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Chrysler" data-make="Chrysler">
+                        <img class="card-img" src="./img/Chrysler_ypsilon_2390.jpg" alt="Chrysler Ypsilon"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £2390</h3>
+                            </div>
+                            <p class="card-text">Make: Chrysler</p>
+                            <p class="card-text">Model: Ypsilon</p>
+                        </div>
+                    </div>
+    
+                    <!--Ford Car Models-->
+                    <div class="product" id="product Ford" data-make="Ford">
+                        <img class="card-img" src="./img/thumbnail_Ford_B_Max_4490.jpg" alt="Ford B Max"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £4490</h3>
+                            </div>
+                            <p class="card-text">Make: Ford</p>
+                            <p class="card-text">Model: B Max</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Ford" data-make="Ford">
+                        <img class="card-img" src="./img/thumbnail_Ford_c_Max_8399.jpg" alt="Ford C Max"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £8399</h3>
+                            </div>
+                            <p class="card-text">Make: Ford</p>
+                            <p class="card-text">Model: C Max</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Ford" data-make="Ford">
+                        <img class="card-img" src="./img/thumbnail_Ford-Escape_4800.jpg" alt="Ford Escape"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £4800</h3>
+                            </div>
+                            <p class="card-text">Make: Ford</p>
+                            <p class="card-text">Model: Escape</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Ford" data-make="Ford">
+                        <img class="card-img" src="./img/Ford_Fiesta_8694.jpg" alt="Ford Fiesta"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £8694</h3>
+                            </div>
+                            <p class="card-text">Make: Ford</p>
+                            <p class="card-text">Model: Fiesta</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Ford" data-make="Ford">
+                        <img class="card-img" src="./img/Ford_focus_13500.jpg" alt="Ford Focus"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £13500</h3>
+                            </div>
+                            <p class="card-text">Make: Ford</p>
+                            <p class="card-text">Model: Focus</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product Ford" data-make="Ford">
+                        <img class="card-img" src="./img/Ford_Mustang_21989.jpg" alt="Ford Mustang"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £21989</h3>
+                            </div>
+                            <p class="card-text">Make: Ford</p>
+                            <p class="card-text">Model: Mustang</p>
+                        </div>
+                    </div>
+    
+                    <!--Honda Car Models-->
+                    <div class="product" id="product" data-make="Honda">
+                        <img class="card-img" src="./img/Honda_accord_9425.jpg" alt="Honda Accord"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £9425</h3>
+                            </div>
+                            <p class="card-text">Make: Honda</p>
+                            <p class="card-text">Model: Accord</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Honda">
+                        <img class="card-img" src="./img/Honda_Civic_54950.jpg" alt="Honda Civic"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £28000</h3>
+                            </div>
+                            <p class="card-text">Make: Honda</p>
+                            <p class="card-text">Model: Civic</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Honda">
+                        <img class="card-img" src="./img/Honda_CR_x_9999.jpg" alt="Honda CR-X"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £9999</h3>
+                            </div>
+                            <p class="card-text">Make: Honda</p>
+                            <p class="card-text">Model: CR-X</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Honda">
+                        <img class="card-img" src="./img/Honda_HR_V_37270.jpg" alt="Honda HR-V"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £37270</h3>
+                            </div>
+                            <p class="card-text">Make: Honda</p>
+                            <p class="card-text">Model: HR-V</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Honda">
+                        <img class="card-img" src="./img/Honda_jazz_29125.jpg" alt="Honda Jazz"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £29125</h3>
+                            </div>
+                            <p class="card-text">Make: Honda</p>
+                            <p class="card-text">Model: Jazz</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Honda">
+                        <img class="card-img" src="./img/Honda_ZR_V_39495.jpg" alt="Honda ZR-V"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £39495</h3>
+                            </div>
+                            <p class="card-text">Make: Honda</p>
+                            <p class="card-text">Model: ZR-V</p>
+                        </div>
+                    </div>
+    
+                    <!--Hyundai Car Models-->
+                    <div class="product" id="product" data-make="Hyundai">
+                        <img class="card-img" src="./img/Hyundai_bayon_22420.jpg" alt="Hyundai Bayon"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £22420</h3>
+                            </div>
+                            <p class="card-text">Make: Hyundai</p>
+                            <p class="card-text">Model: Bayon</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Hyundai">
+                        <img class="card-img" src="./img/Hyundai_I_20_27030.jpg" alt="Hyundai i-20"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £27030</h3>
+                            </div>
+                            <p class="card-text">Make: Hyundai</p>
+                            <p class="card-text">Model: i-20</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Hyundai">
+                        <img class="card-img" src="./img/thumbnail_Hyundai_i_30_32995.jpg" alt="Hyundai i-30"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £32995</h3>
+                            </div>
+                            <p class="card-text">Make: Hyundai</p>
+                            <p class="card-text">Model: i-30</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Hyundai">
+                        <img class="card-img" src="./img/Hyundai_IONIQ_14990.jpg" alt="Hyundai IONIQ"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £14990</h3>
+                            </div>
+                            <p class="card-text">Make: Hyundai</p>
+                            <p class="card-text">Model: IONIQ</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Hyundai">
+                        <img class="card-img" src="./img/Hyunday_KONa_25495.jpg" alt="Hyundai KONA"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £25495</h3>
+                            </div>
+                            <p class="card-text">Make: Hyundai</p>
+                            <p class="card-text">Model: KONA</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Hyundai">
+                        <img class="card-img" src="./img/Hyundai_TUSCON_8500.jpg" alt="Hyundai TUSCON"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £8500</h3>
+                            </div>
+                            <p class="card-text">Make: Hyundai</p>
+                            <p class="card-text">Model: TUSCON</p>
+                        </div>
+                    </div>
+    
+                    <!--Jaguar Car Models-->
+                    <div class="product" id="product" data-make="Jaguar">
+                        <img class="card-img" src="./img/Jaguar_E_pace_9989.jpg" alt="Jaguar E-PACE"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £9989</h3>
+                            </div>
+                            <p class="card-text">Make: Jaguar</p>
+                            <p class="card-text">Model: E-PACE</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Jaguar">
+                        <img class="card-img" src="./img/Jaguar_xe_3500.jpg" alt="Jaguar XE"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £3500</h3>
+                            </div>
+                            <p class="card-text">Make: Jaguar</p>
+                            <p class="card-text">Model: XE</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Jaguar">
+                        <img class="card-img" src="./img/Jaguar_xf_52430.jpg" alt="Jaguar XF"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £52430</h3>
+                            </div>
+                            <p class="card-text">Make: Jaguar</p>
+                            <p class="card-text">Model: XF</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Jaguar">
+                        <img class="card-img" src="./img/Jaguar_F_PACE_10990.jpg" alt="Jaguar F-Pace"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £10990</h3>
+                            </div>
+                            <p class="card-text">Make: Jaguar</p>
+                            <p class="card-text">Model: F-Pace</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product" id="product" data-make="Jaguar">
+                        <img class="card-img" src="./img/Jaguar_XKR_8450.jpg" alt="Jaguar XKR"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £8450</h3>
+                            </div>
+                            <p class="card-text">Make: Jaguar</p>
+                            <p class="card-text">Model: XKR</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Jaguar">
+                        <img class="card-img" src="./img/thumbnail_Jaguar_x_type_4495.jpg" alt="Jaguar X-Type"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £4495</h3>
+                            </div>
+                            <p class="card-text">Make: Jaguar</p>
+                            <p class="card-text">Model: X-Type</p>
+                        </div>
+                    </div>
+    
+                    <!--Kia Car Models-->
+                    <div class="product" id="product" data-make="Kia">
+                        <img class="card-img" src="./img/KIA_Ceed_2225.jpg" alt="KIA Ceed"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £2225</h3>
+                            </div>
+                            <p class="card-text">Make: KIA</p>
+                            <p class="card-text">Model: Ceed</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Kia">
+                        <img class="card-img" src="./img/KIA_picanto_2100.jpg" alt="KIA Picanto"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £2100</h3>
+                            </div>
+                            <p class="card-text">Make: KIA</p>
+                            <p class="card-text">Model: Picanto</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Kia">
+                        <img class="card-img" src="./img/KIA_Sportage_41995.jpg" alt="KIA Sportage"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £41995</h3>
+                            </div>
+                            <p class="card-text">Make: KIA</p>
+                            <p class="card-text">Model: Sportage</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Kia">
+                        <img class="card-img" src="./img/KIA_stonic_26375.jpg" alt="KIA Stonic"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £26375</h3>
+                            </div>
+                            <p class="card-text">Make: KIA</p>
+                            <p class="card-text">Model: Stonic</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Kia">
+                        <img class="card-img" src="./img/KIA_Venga_11995.jpg" alt="KIA Venga"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £11995</h3>
+                            </div>
+                            <p class="card-text">Make: KIA</p>
+                            <p class="card-text">Model: Venga</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Kia">
+                        <img class="card-img" src="./img/KIA_xceed_13750.jpg" alt="KIA XCeed"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £13750</h3>
+                            </div>
+                            <p class="card-text">Make: KIA</p>
+                            <p class="card-text">Model: XCeed</p>
+                        </div>
+                    </div>
+    
+                    <!--Lexus Car Models-->
+                    <div class="product" id="product" data-make="Lexus">
+                        <img class="card-img" src="./img/thumbnail_Lexus_CT_6795.jpg" alt="Lexus CT"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £6795</h3>
+                            </div>
+                            <p class="card-text">Make: Lexus</p>
+                            <p class="card-text">Model: CT</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Lexus">
+                        <img class="card-img" src="./img/Lexus_es_20430.jpg" alt="Lexus ES"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £20430</h3>
+                            </div>
+                            <p class="card-text">Make: Lexus</p>
+                            <p class="card-text">Model: ES</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Lexus">
+                        <img class="card-img" src="./img/Lexus_IS_2289.jpg" alt="Lexus IS"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £2289</h3>
+                            </div>
+                            <p class="card-text">Make: Lexus</p>
+                            <p class="card-text">Model: IS</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Lexus">
+                        <img class="card-img" src="./img/Lexus_nx_13490.jpg" alt="Lexus NX"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £13490</h3>
+                            </div>
+                            <p class="card-text">Make: Lexus</p>
+                            <p class="card-text">Model: NX</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Lexus">
+                        <img class="card-img" src="./img/Lexus_RX_51419.jpg" alt="Lexus RX"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £51419</h3>
+                            </div>
+                            <p class="card-text">Make: Lexus</p>
+                            <p class="card-text">Model: RX</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Lexus">
+                        <img class="card-img" src="./img/Lexus_rxl_41710.jpg" alt="Lexus RXL"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £41710</h3>
+                            </div>
+                            <p class="card-text">Make: Lexus</p>
+                            <p class="card-text">Model: RXL</p>
+                        </div>
+                    </div>
+    
+                    <!--Mercedes Car Models-->
+                    <div class="product" id="product" data-make="Mercedes">
+                        <img class="card-img" src="./img/Mercedes_A_Class_3700.jpg" alt="Mercedes A Class"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £3700</h3>
+                            </div>
+                            <p class="card-text">Make: Mercedes</p>
+                            <p class="card-text">Model: A Class</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Mercedes">
+                        <img class="card-img" src="./img/Mercedes_c_class_38495.jpg" alt="Mercedes C Class"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £38495</h3>
+                            </div>
+                            <p class="card-text">Make: Mercedes</p>
+                            <p class="card-text">Model: C Class</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Mercedes">
+                        <img class="card-img" src="./img/Mercedes_CLA_Class_33253.jpg" alt="Mercedes CLA Class"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £33253</h3>
+                            </div>
+                            <p class="card-text">Make: Mercedes</p>
+                            <p class="card-text">Model: CLA Class</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Mercedes">
+                        <img class="card-img" src="./img/Mercedes_e_class_88995.jpg" alt="Mercedes E Class"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £88995</h3>
+                            </div>
+                            <p class="card-text">Make: Mercedes</p>
+                            <p class="card-text">Model: E Class</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Mercedes">
+                        <img class="card-img" src="./img/Mercedes_GLA_14999.jpg" alt="Mercedes GLA"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £14999</h3>
+                            </div>
+                            <p class="card-text">Make: Mercedes</p>
+                            <p class="card-text">Model: GLA</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Mercedes">
+                        <img class="card-img" src="./img/thumbnail_Mercedes_gle_59000.jpg" alt="Mercedes GLE"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £59000</h3>
+                            </div>
+                            <p class="card-text">Make: Mercedes</p>
+                            <p class="card-text">Model: GLE</p>
+                        </div>
+                    </div>
+    
+                    <!--Nissan Car Models-->
+                    <div class="product" id="product" data-make="Nissan">
+                        <img class="card-img" src="./img/Nissan_ARIYA_36950.jpg" alt="Nissan ARIYA"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £36950</h3>
+                            </div>
+                            <p class="card-text">Make: Nissan</p>
+                            <p class="card-text">Model: ARIYA</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Nissan">
+                        <img class="card-img" src="./img/Nissan_juke_3395.jpg" alt="Nissan Juke"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £3395</h3>
+                            </div>
+                            <p class="card-text">Make: Nissan</p>
+                            <p class="card-text">Model: Juke</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Nissan">
+                        <img class="card-img" src="./img/Nissan_Micra_13995.jpg" alt="Nissan Micra"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £3395</h3>
+                            </div>
+                            <p class="card-text">Make: Nissan</p>
+                            <p class="card-text">Model: Micra</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Nissan">
+                        <img class="card-img" src="./img/thumbnail_Nissan_pulsar_20200.jpg" alt="Nissan Pulsar"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £20200</h3>
+                            </div>
+                            <p class="card-text">Make: Nissan</p>
+                            <p class="card-text">Model: Pulsar</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Nissan">
+                        <img class="card-img" src="./img/Nissan_qashqai_37495.jpg" alt="Nissan Qashqai"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £37495</h3>
+                            </div>
+                            <p class="card-text">Make: Nissan</p>
+                            <p class="card-text">Model: Qashqai</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Nissan">
+                        <img class="card-img" src="./img/Nissan_xtrail_40095.jpg" alt="Nissan X-Trail"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £40095</h3>
+                            </div>
+                            <p class="card-text">Make: Nissan</p>
+                            <p class="card-text">Model: X-Trail</p>
+                        </div>
+                    </div>
+    
+                    <!--Seat Car Models-->
+                    <div class="product" id="product" data-make="Seat">
+                        <img class="card-img" src="./img/SEAT_alhambra_3299.jpg" alt="SEAT Alhambra"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £3299</h3>
+                            </div>
+                            <p class="card-text">Make: SEAT</p>
+                            <p class="card-text">Model: Alhambra</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Seat">
+                        <img class="card-img" src="./img/SEAT_Arona_6990.jpg" alt="SEAT Arona"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £6990</h3>
+                            </div>
+                            <p class="card-text">Make: SEAT</p>
+                            <p class="card-text">Model: Arona</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Seat">
+                        <img class="card-img" src="./img/SEAT_ateca_29950.jpg" alt="SEAT Ateca"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £29950</h3>
+                            </div>
+                            <p class="card-text">Make: SEAT</p>
+                            <p class="card-text">Model: Ateca</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Seat">
+                        <img class="card-img" src="./img/SEAT_Ibiza_13995.jpg" alt="SEAT Ibiza"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £13995</h3>
+                            </div>
+                            <p class="card-text">Make: SEAT</p>
+                            <p class="card-text">Model: Ibiza</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Seat">
+                        <img class="card-img" src="./img/thumbnail_SEAT_leon_21495.jpg" alt="SEAT Leon"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £21495</h3>
+                            </div>
+                            <p class="card-text">Make: SEAT</p>
+                            <p class="card-text">Model: Leon</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Seat">
+                        <img class="card-img" src="./img/SEAT_tarraco_33995.jpg" alt="SEAT Tarraco"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £33995</h3>
+                            </div>
+                            <p class="card-text">Make: SEAT</p>
+                            <p class="card-text">Model: Tarraco</p>
+                        </div>
+                    </div>
+    
+                    <!--Toyota Car Models-->
+                    <div class="product" id="product" data-make="Toyota">
+                        <img class="card-img" src="./img/thumbnail_Toyota_Auris_9989.jpg" alt="Toyota Auris"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £9989</h3>
+                            </div>
+                            <p class="card-text">Make: Toyota</p>
+                            <p class="card-text">Model: Auris</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Toyota">
+                        <img class="card-img" src="./img/Toyota_aygo_12987.jpg" alt="Toyota AYGO"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £12987</h3>
+                            </div>
+                            <p class="card-text">Make: Toyota</p>
+                            <p class="card-text">Model: AYGO</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Toyota">
+                        <img class="card-img" src="./img/Toyota_Corolla_29995.jpg" alt="Toyota Corolla"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £29995</h3>
+                            </div>
+                            <p class="card-text">Make: Toyota</p>
+                            <p class="card-text">Model: Corolla</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Toyota">
+                        <img class="card-img" src="./img/Toyota_estima_6495.jpg" alt="Toyota Estima"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £6495</h3>
+                            </div>
+                            <p class="card-text">Make: Toyota</p>
+                            <p class="card-text">Model: Estima</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Toyota">
+                        <img class="card-img" src="./img/Toyota_Prius_23450.jpg" alt="Toyota Prius"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £23450</h3>
+                            </div>
+                            <p class="card-text">Make: Toyota</p>
+                            <p class="card-text">Model: Prius</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Toyota">
+                        <img class="card-img" src="./img/Toyota_land_cruiser_57999.jpg" alt="Toyota Land Cruiser"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £57999</h3>
+                            </div>
+                            <p class="card-text">Make: Toyota</p>
+                            <p class="card-text">Model: Land Cruiser</p>
+                        </div>
+                    </div>
+    
+                    <!--Vauxxall Car Models-->
+                    <div class="product" id="product" data-make="Vauxhall">
+                        <img class="card-img" src="./img/Vauxhall_astra_26444.jpg" alt="Vauxhall Astra"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £26444</h3>
+                            </div>
+                            <p class="card-text">Make: Vauxhall</p>
+                            <p class="card-text">Model: Astra</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Vauxhall">
+                        <img class="card-img" src="./img/thumbnail_Vauxhall_grandland_x_19249.jpg" alt="Vauxhall Grandland X"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £19249</h3>
+                            </div>
+                            <p class="card-text">Make: Vauxhall</p>
+                            <p class="card-text">Model: Grandland X</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Vauxhall">
+                        <img class="card-img" src="./img/Vauxhall_Corsa_2995.jpg" alt="Vauxhall Corsa"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £2995</h3>
+                            </div>
+                            <p class="card-text">Make: Vauxhall</p>
+                            <p class="card-text">Model: Corsa</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Vauxhall">
+                        <img class="card-img" src="./img/Vauxhall_Mokka_8265.jpg" alt="Vauxhall Mokka"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £8265</h3>
+                            </div>
+                            <p class="card-text">Make: Vauxhall</p>
+                            <p class="card-text">Model: Mokka</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Vauxhall">
+                        <img class="card-img" src="./img/Vauxhall _vivaro-e_life_42950.jpg" alt="Vauxhall Vivaro-e Life"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £42950</h3>
+                            </div>
+                            <p class="card-text">Make: Vauxhall</p>
+                            <p class="card-text">Model: Vivaro-e Life</p>
+                        </div>
+                    </div>
+    
+                    <div class="product" id="product" data-make="Vauxhall">
+                        <img class="card-img" src="./img/Vauxhall_Crossland_16350.jpg" alt="Vauxhall Crossland"/>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <h3 class="card-header">Price: £16350</h3>
+                            </div>
+                            <p class="card-text">Make: Vauxhall</p>
+                            <p class="card-text">Model: Crossland</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!--Scroll to top button-->
+            <button id="btnScrollToTop">
+                <i class='bx bx-up-arrow-alt'></i>
+            </button>
+
+            <!--Footer-->
+            <footer>
+                <p>All Rights Reserved @Auto Whiz 2024</p>
+            </footer>
+        </div>
 
 
         <script type="text/javascript" src="./script.js"></script>

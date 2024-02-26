@@ -9,11 +9,21 @@ btnScrollToTop.addEventListener("click", function () {
 
 });
 
+// Greeting when opening page
+let myname = prompt("Welcome to Auto Whiz! What's your name?");
+if (myname != null){
+    {alert("Hello " + myname + "! 😊 Use our form below to find your ideal car")};
+} else {
+    {alert("Hello my friend! 😊 Use our form below to find your ideal car")};
+};
+
+
 // Alters model options by what car make you pick
 function populate(s1, s2){
     var s1 = document.getElementById(s1);
     var s2 = document.getElementById(s2);
     s2.innerHTML = "";
+
     if(s1.value == "Audi") {
         var optionArray = ["Any|Any", "A3|A3", "E-tron|E-tron", "Q5|Q5", "RS7|RS7", "SQ2|SQ2", "TT|TT"];
     } else if(s1.value == "BMW") {
@@ -43,7 +53,7 @@ function populate(s1, s2){
     } else if(s1.value == "Vauxhall") {
         var optionArray = ["Any|Any", "Astra|Astra", "Crossland X|Crossland X", "Grandland X|Grandland X", "Mokka|Mokka", "Mokka X|Mokka X", "Zafira Tourer|Zafira Tourer"];
     }
-    for(var option in optionArray){
+    for (var option in optionArray){
         var pair = optionArray[option].split("|");
         var newOption = document.createElement("option");
         newOption.value = pair[0];
@@ -52,25 +62,98 @@ function populate(s1, s2){
     }
 };
 
+// Event listener for form reset
+document.getElementById('Reset').addEventListener('click', handleReset);
+document.getElementById('calculate');
+
+// Event listeners for dropdown selections
+document.getElementById('s1').addEventListener('input', handleSelect);
+document.getElementById('s2').addEventListener('input', handleSelect);
+document.getElementById('s3').addEventListener('input', handleSelect);
+
+// Form Reset Functionality
+function handleReset() {
+    document.getElementById("s1").value = 0;
+    document.getElementById("s2").value = 0;
+    document.getElementById("s3").value = 0;
+    calculate.textContent = 'Finding Cars...';
+}
+
+
+  function handleSelect(e) {
+    let select = e.target;
+    console.log(select.value); // Log the selected value
+
+    // Determine the dropdown based on the ID of the select element
+    switch (select.id) {
+        case 's1':
+            // Handle make selection
+            break;
+        case 's2':
+            // Handle model selection
+            break;
+        case 's3':
+            // Handle price selection
+            break;
+            default:
+            break;
+    }
+  }
+
+  // Determine the enableSingleBrand function outside of handleSubmit
+  function enableSingleBrand(answer) {
+    console.log(answer.value);
+    const makeValue = answer.value;
+
+    // Hide all product elements
+    let products = document.querySelectorAll('.product');
+    products.forEach(product => {
+        product.style.display = 'none';
+    });
+
+    // Show products for the selected make
+    const selectedMakeProducts = document.querySelectorAll(`.product[data-make="${makeValue}"]`);
+    selectedMakeProducts.forEach(product => {
+        product.style.display = 'block';
+    });
+}
+
+function handleSubmit() {
+    const makeSelect = document.getElementById('s1');
+    const selectedMake = makeSelect.value;
+    calculate.textContent = 'We found these cars for you! ✨'
+
+// Call the enableSingleBrand function with the selected make
+enableSingleBrand({ value: selectedMake});
+}
+
 
 //Reset button
-const Reset = document.getElementById("Reset");
-Reset.addEventListener("click", function(){
-    document.getElementById("s1").value = "";
-    document.getElementById("s2").value = "";
-    document.getElementById("s3").value = "";
-    resultElement.textContent = '';
-});
+// const Reset = document.getElementById("Reset");
+// Reset.addEventListener("click", function(){
+//     document.getElementById("s1").value = "";
+//     document.getElementById("s2").value = "";
+//     document.getElementById("s3").value = "";
+//     resultElement.textContent = '';
+// });
 
 // Search button 
-const searchBtn = document.getElementById("Search");
-const resultElement = document.getElementById("countResults");
+// const searchBtn = document.getElementById("Search");
+// const resultElement = document.getElementById("countResults");
+// const products = document.querySelectorAll('.product');
 
-searchBtn.addEventListener("click", function(){
-    const s1 = document.getElementById("s1").value;
-    const s2 = document.getElementById("s2").value;
-    const s3 = document.getElementById("s3").value;
+// searchBtn.addEventListener("click", function(){
+    
+//     const s1 = document.getElementById("s1").value;
+//     const s2 = document.getElementById("s2").value;
+//     const s3 = document.getElementById("s3").value;
 
-    let result = ""; //need to figure this out!
-    resultElement.textContent = "We have " + result + " cars for you!✨";
-});
+//     let result = s1 + s2 + s3;
+//     resultElement.textContent = "We have " + result + " cars for you!✨";
+
+// products.forEach((product) => {
+//     product.style.display = 'none';
+//     });
+// });
+
+// Hide all product elements
