@@ -32,7 +32,7 @@
             </nav>
 
             <aside class="wishlist-card" id="wishlist">
-                <h1>Your wishlist:</h1>
+                <h1>Your wishlist</h1>
                 <div class="checkOut">
                     <div class="total">Buy Now</div>
                     <div class="closeShopping">Close</div>
@@ -49,8 +49,8 @@
                 <form class="car-form" id="car-form">
                     <h3 id="title">Find your ideal vehicle</h3>
                     <div class="content-item">
-                        <label for="Make">Make</label>
-                        <select name="s1" id="s1" onchange="populate(this.id, 's2')">
+                        <label for="s1">Make</label>
+                        <select name="s1" id="s1" onchange="populate('s1', 's2')">
                             <option value="0" selected>Select Make</option>
                             <option value="Audi">Audi</option>
                             <option value="BMW">BMW</option>
@@ -71,7 +71,7 @@
 
                     <!--Car Model Option-->
                     <div class="content-item">
-                        <label for="Model">Model</label>
+                        <label for="s2">Model</label>
                         <select name="s2" id="s2">
                             <option value="0" selected id="0">Any</option>
 
@@ -220,20 +220,20 @@
 
                     <!--Car Price Option-->
                     <div class="content-item">
-                        <label for="Price">Total Price</label>
+                        <label for="s3">Total Price</label>
                         <select name="s3" id="s3">
                             <option value="0" selected id="0">Any</option>
-                            <option value="£2000-£10000" id="1">£2000-£10000</option>
-                            <option value="£10000-£20000" id="2">£10000-£20000</option>
-                            <option value="£20000-£50000" id="3">£20000-£50000</option>
-                            <option value="£50000+" id="4">£50000+</option>
+                            <option value="2000-10000" id="1">£2000-£10000</option>
+                            <option value="10000-20000" id="2">£10000-£20000</option>
+                            <option value="20000-50000" id="3">£20000-£50000</option>
+                            <option value="50000" id="4">£50000+</option>
                         </select>
                     </div>
 
                     <!--Form buttons - Submit and Reset-->
                     <div class="form-btns">
-                        <input type="button" value="Search" name="Search" id="Search" onclick="handleSubmit()">
-                        <input type="button" value="Reset" name="reset" id="Reset" onclick="handleReset()">
+                        <input type="button" value="Search" name="Search" id="Search" onclick="handleSubmit()"/>
+                        <input type="button" value="Reset" name="reset" id="Reset" onclick="handleReset()"/>
                     </div>
                 </form>
 
@@ -259,7 +259,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="0" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £9095</h3>
+                                <h3 class="card-header" data-price="9095">Price: £9095</h3>
                             </div>
                             <p class="card-text">Make: Audi</p>
                             <p class="card-text">Model: A3</p>
@@ -271,7 +271,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="1" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £35000</h3>
+                                <h3 class="card-header" data-price="35000">Price: £35000</h3>
                             </div>
                             <p class="card-text">Make: Audi</p>
                             <p class="card-text">Model: E-tron</p>
@@ -283,7 +283,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="2" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £33995</h3>
+                                <h3 class="card-header" data-price="33995">Price: £33995</h3>
                             </div>
                             <p class="card-text">Make: Audi</p>
                             <p class="card-text">Model: Q5</p>
@@ -295,7 +295,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="3" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £37450</h3>
+                                <h3 class="card-header" data-price="37450">Price: £37450</h3>
                             </div>
                             <p class="card-text">Make: Audi</p>
                             <p class="card-text">Model: RS7</p>
@@ -307,7 +307,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="4" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £19000</h3>
+                                <h3 class="card-header" data-price="19000">Price: £19000</h3>
                             </div>
                             <p class="card-text">Make: Audi</p>
                             <p class="card-text">Model: TT</p>
@@ -320,7 +320,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="5" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £7500</h3>
+                                <h3 class="card-header" data-price="7500">Price: £7500</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
                             <p class="card-text">Model: Z3</p>
@@ -332,7 +332,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="6" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £12995</h3>
+                                <h3 class="card-header" data-price="12995">Price: £12995</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
                             <p class="card-text">Model: M6</p>
@@ -344,7 +344,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="7" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £48995</h3>
+                                <h3 class="card-header" data-price="48995">Price: £48995</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
                             <p class="card-text">Model: X5</p>
@@ -356,7 +356,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="8" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £118355</h3>
+                                <h3 class="card-header" data-price="118355">Price: £118355</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
                             <p class="card-text">Model: i7</p>
@@ -368,7 +368,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="9" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £22995</h3>
+                                <h3 class="card-header" data-price="22995">Price: £22995</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
                             <p class="card-text">Model: Alpina B8</p>
@@ -380,7 +380,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="10" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £10395</h3>
+                                <h3 class="card-header" data-price="10395">Price: £10395</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
                             <p class="card-text">Model: 3 Series</p>
@@ -395,7 +395,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="11" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £8995</h3>
+                                <h3 class="card-header" data-price="8995">Price: £8995</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
                             <p class="card-text">Model: 300C</p>
@@ -407,7 +407,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="12" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £7500</h3>
+                                <h3 class="card-header" data-price="7500">Price: £7500</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
                             <p class="card-text">Model: Crossfire</p>
@@ -419,7 +419,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="13" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £3899</h3>
+                                <h3 class="card-header" data-price="3899">Price: £3899</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
                             <p class="card-text">Model: Delta</p>
@@ -431,7 +431,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="14" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £2495</h3>
+                                <h3 class="card-header" data-price="2495">Price: £2495</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
                             <p class="card-text">Model: Grand Voyager</p>
@@ -443,7 +443,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="15" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £2250</h3>
+                                <h3 class="card-header" data-price="2250">Price: £2250</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
                             <p class="card-text">Model: PT Cruiser</p>
@@ -455,7 +455,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="16" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £2390</h3>
+                                <h3 class="card-header" data-price="2390">Price: £2390</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
                             <p class="card-text">Model: Ypsilon</p>
@@ -468,7 +468,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="17" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £4490</h3>
+                                <h3 class="card-header" data-price="4490">Price: £4490</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
                             <p class="card-text">Model: B-Max</p>
@@ -480,7 +480,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="18" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £8399</h3>
+                                <h3 class="card-header" data-price="8399">Price: £8399</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
                             <p class="card-text">Model: C-Max</p>
@@ -492,7 +492,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="19" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £4800</h3>
+                                <h3 class="card-header" data-price="4800">Price: £4800</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
                             <p class="card-text">Model: Escape</p>
@@ -504,7 +504,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="20" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £8694</h3>
+                                <h3 class="card-header" data-price="8694">Price: £8694</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
                             <p class="card-text">Model: Fiesta</p>
@@ -516,7 +516,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="21" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £13500</h3>
+                                <h3 class="card-header" data-price="13500">Price: £13500</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
                             <p class="card-text">Model: Focus</p>
@@ -528,7 +528,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="22" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £21989</h3>
+                                <h3 class="card-header" data-price="21989">Price: £21989</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
                             <p class="card-text">Model: Mustang Mach-E</p>
@@ -541,7 +541,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="23" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £9425</h3>
+                                <h3 class="card-header" data-price="9425">Price: £9425</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
                             <p class="card-text">Model: Accord</p>
@@ -553,7 +553,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="24" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £28000</h3>
+                                <h3 class="card-header" data-price="28000">Price: £28000</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
                             <p class="card-text">Model: Civic</p>
@@ -565,7 +565,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="25" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £9999</h3>
+                                <h3 class="card-header" data-price="9999">Price: £9999</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
                             <p class="card-text">Model: CR-X</p>
@@ -577,7 +577,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="26" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £37270</h3>
+                                <h3 class="card-header" data-price="37270">Price: £37270</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
                             <p class="card-text">Model: HR-V</p>
@@ -589,7 +589,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="27" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £29125</h3>
+                                <h3 class="card-header" data-price="29125">Price: £29125</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
                             <p class="card-text">Model: Jazz</p>
@@ -601,7 +601,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="28" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £39495</h3>
+                                <h3 class="card-header" data-price="39495">Price: £39495</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
                             <p class="card-text">Model: ZR-V</p>
@@ -614,7 +614,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="29" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £22420</h3>
+                                <h3 class="card-header" data-price="22420">Price: £22420</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
                             <p class="card-text">Model: Bayon</p>
@@ -626,7 +626,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="30" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £27030</h3>
+                                <h3 class="card-header" data-price="27030">Price: £27030</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
                             <p class="card-text">Model: i20</p>
@@ -638,7 +638,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="31" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £32995</h3>
+                                <h3 class="card-header" data-price="32995">Price: £32995</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
                             <p class="card-text">Model: i30</p>
@@ -650,7 +650,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="32" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £14990</h3>
+                                <h3 class="card-header" data-price="14990">Price: £14990</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
                             <p class="card-text">Model: IONIQ</p>
@@ -662,7 +662,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="33" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £25495</h3>
+                                <h3 class="card-header" data-price="25495">Price: £25495</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
                             <p class="card-text">Model: Kona</p>
@@ -674,7 +674,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="34" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £8500</h3>
+                                <h3 class="card-header" data-price="8500">Price: £8500</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
                             <p class="card-text">Model: TUSCON</p>
@@ -687,7 +687,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="35" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £9989</h3>
+                                <h3 class="card-header" data-price="9989">Price: £9989</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
                             <p class="card-text">Model: E-PACE</p>
@@ -699,7 +699,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="36" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £3500</h3>
+                                <h3 class="card-header" data-price="3500">Price: £3500</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
                             <p class="card-text">Model: XE</p>
@@ -711,7 +711,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="37" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £52430</h3>
+                                <h3 class="card-header" data-price="52430">Price: £52430</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
                             <p class="card-text">Model: XF</p>
@@ -723,7 +723,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="38" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £10990</h3>
+                                <h3 class="card-header" data-price="10990">Price: £10990</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
                             <p class="card-text">Model: F-PACE</p>
@@ -735,7 +735,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="39" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £8450</h3>
+                                <h3 class="card-header" data-price="8450">Price: £8450</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
                             <p class="card-text">Model: XKR</p>
@@ -747,7 +747,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="40" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £4495</h3>
+                                <h3 class="card-header" data-price="4495">Price: £4495</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
                             <p class="card-text">Model: X-Type</p>
@@ -760,7 +760,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="41" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £2225</h3>
+                                <h3 class="card-header" data-price="2225">Price: £2225</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
                             <p class="card-text">Model: Ceed</p>
@@ -772,7 +772,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="42" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £2100</h3>
+                                <h3 class="card-header" data-price="2100">Price: £2100</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
                             <p class="card-text">Model: Picanto</p>
@@ -784,7 +784,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="43" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £41995</h3>
+                                <h3 class="card-header" data-price="41995">Price: £41995</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
                             <p class="card-text">Model: Sportage</p>
@@ -796,7 +796,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="44" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £26375</h3>
+                                <h3 class="card-header" data-price="26375">Price: £26375</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
                             <p class="card-text">Model: Stonic</p>
@@ -808,7 +808,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="45" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £11995</h3>
+                                <h3 class="card-header" data-price="11995">Price: £11995</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
                             <p class="card-text">Model: Venga</p>
@@ -820,7 +820,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="46" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £13750</h3>
+                                <h3 class="card-header" data-price="13750">Price: £13750</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
                             <p class="card-text">Model: XCeed</p>
@@ -833,7 +833,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="47" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £6795</h3>
+                                <h3 class="card-header" data-price="6795">Price: £6795</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
                             <p class="card-text">Model: CT</p>
@@ -845,7 +845,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="48" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £20430</h3>
+                                <h3 class="card-header" data-price="20430">Price: £20430</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
                             <p class="card-text">Model: ES</p>
@@ -857,7 +857,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="49" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £2289</h3>
+                                <h3 class="card-header" data-price="2289">Price: £2289</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
                             <p class="card-text">Model: IS</p>
@@ -869,7 +869,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="50" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £13490</h3>
+                                <h3 class="card-header" data-price="13490">Price: £13490</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
                             <p class="card-text">Model: NX</p>
@@ -881,7 +881,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="51" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £51419</h3>
+                                <h3 class="card-header" data-price="51419">Price: £51419</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
                             <p class="card-text">Model: RX</p>
@@ -893,7 +893,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="52" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £41710</h3>
+                                <h3 class="card-header" data-price="41710">Price: £41710</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
                             <p class="card-text">Model: RXL</p>
@@ -906,7 +906,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="53" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £3700</h3>
+                                <h3 class="card-header" data-price="3700">Price: £3700</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
                             <p class="card-text">Model: A Class</p>
@@ -918,7 +918,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="54" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £38495</h3>
+                                <h3 class="card-header" data-price="38495">Price: £38495</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
                             <p class="card-text">Model: C Class</p>
@@ -930,7 +930,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="55" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £33253</h3>
+                                <h3 class="card-header" data-price="33253">Price: £33253</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
                             <p class="card-text">Model: CLA Class</p>
@@ -942,7 +942,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="56" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £88995</h3>
+                                <h3 class="card-header" data-price="88995">Price: £88995</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
                             <p class="card-text">Model: E Class</p>
@@ -954,7 +954,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="57" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £14999</h3>
+                                <h3 class="card-header" data-price="14999">Price: £14999</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
                             <p class="card-text">Model: GLA Class</p>
@@ -966,7 +966,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="58" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £59000</h3>
+                                <h3 class="card-header" data-price="59000">Price: £59000</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
                             <p class="card-text">Model: GLE</p>
@@ -979,7 +979,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="59" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £36950</h3>
+                                <h3 class="card-header" data-price="36950">Price: £36950</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
                             <p class="card-text">Model: ARIYA</p>
@@ -991,7 +991,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="60" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £3395</h3>
+                                <h3 class="card-header" data-price="3395">Price: £3395</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
                             <p class="card-text">Model: Juke</p>
@@ -1003,7 +1003,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="61" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £3395</h3>
+                                <h3 class="card-header" data-price="3395">Price: £3395</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
                             <p class="card-text">Model: Micra</p>
@@ -1015,7 +1015,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="62" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £20200</h3>
+                                <h3 class="card-header" data-price="20200">Price: £20200</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
                             <p class="card-text">Model: Pulsar</p>
@@ -1027,7 +1027,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="63" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £37495</h3>
+                                <h3 class="card-header" data-price="37495">Price: £37495</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
                             <p class="card-text">Model: Qashqai</p>
@@ -1039,7 +1039,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="64" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £40095</h3>
+                                <h3 class="card-header data-price="40095"">Price: £40095</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
                             <p class="card-text">Model: X-Trail</p>
@@ -1052,7 +1052,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="65" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £3299</h3>
+                                <h3 class="card-header" data-price="3299">Price: £3299</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
                             <p class="card-text">Model: Alhambra</p>
@@ -1064,7 +1064,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="66" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £6990</h3>
+                                <h3 class="card-header" data-price="6990">Price: £6990</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
                             <p class="card-text">Model: Arona</p>
@@ -1076,7 +1076,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="67" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £29950</h3>
+                                <h3 class="card-header" data-price="29950">Price: £29950</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
                             <p class="card-text">Model: Ateca</p>
@@ -1088,7 +1088,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="68" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £13995</h3>
+                                <h3 class="card-header" data-price="13995">Price: £13995</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
                             <p class="card-text">Model: Ibiza</p>
@@ -1100,7 +1100,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="69" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £21495</h3>
+                                <h3 class="card-header" data-price="21495">Price: £21495</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
                             <p class="card-text">Model: Leon</p>
@@ -1112,7 +1112,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="70" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £33995</h3>
+                                <h3 class="card-header" data-price="33995">Price: £33995</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
                             <p class="card-text">Model: Tarraco</p>
@@ -1125,7 +1125,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="71" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £9989</h3>
+                                <h3 class="card-header" data-price="9989">Price: £9989</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
                             <p class="card-text">Model: Auris</p>
@@ -1137,7 +1137,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="72" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £12987</h3>
+                                <h3 class="card-header" data-price="12987">Price: £12987</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
                             <p class="card-text">Model: AYGO</p>
@@ -1149,7 +1149,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="73" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £29995</h3>
+                                <h3 class="card-header" data-price="29995">Price: £29995</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
                             <p class="card-text">Model: Corolla</p>
@@ -1161,7 +1161,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="74" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £6495</h3>
+                                <h3 class="card-header" data-price="6495">Price: £6495</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
                             <p class="card-text">Model: Estima</p>
@@ -1173,7 +1173,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="75" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £23450</h3>
+                                <h3 class="card-header" data-price="23450">Price: £23450</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
                             <p class="card-text">Model: Prius</p>
@@ -1185,7 +1185,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="76" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £57999</h3>
+                                <h3 class="card-header" data-price="57999">Price: £57999</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
                             <p class="card-text">Model: Land Cruiser</p>
@@ -1198,7 +1198,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="77" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £26444</h3>
+                                <h3 class="card-header" data-price="26444">Price: £26444</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
                             <p class="card-text">Model: Astra</p>
@@ -1210,7 +1210,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="78" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £19249</h3>
+                                <h3 class="card-header" data-price="19249">Price: £19249</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
                             <p class="card-text">Model: Grandland X</p>
@@ -1222,7 +1222,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="79" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £2995</h3>
+                                <h3 class="card-header" data-price="2995">Price: £2995</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
                             <p class="card-text">Model: Corsa</p>
@@ -1234,7 +1234,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="80" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £8265</h3>
+                                <h3 class="card-header" data-price="8265">Price: £8265</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
                             <p class="card-text">Model: Mokka</p>
@@ -1246,7 +1246,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="81" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £42950</h3>
+                                <h3 class="card-header" data-price="42950">Price: £42950</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
                             <p class="card-text">Model: Vivaro-e Life</p>
@@ -1258,7 +1258,7 @@
                         <div class="card-content">
                             <div class="card-title">
                                 <input class="card-btn" id="82" type="button" value="&#10084"/>
-                                <h3 class="card-header">Price: £16350</h3>
+                                <h3 class="card-header" data-price="16350">Price: £16350</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
                             <p class="card-text">Model: Crossland</p>
