@@ -49,7 +49,7 @@
                 <form class="car-form" id="car-form">
                     <h3 id="title">Find your ideal vehicle</h3>
                     <div class="content-item">
-                        <label for="Make">Make</label>
+                        <label for="s1">Make</label>
                         <select name="s1" id="s1" onchange="populate(this.id, 's2')">
                             <option value="0" selected>Select Make</option>
                             <option value="Audi">Audi</option>
@@ -71,7 +71,7 @@
 
                     <!--Car Model Option-->
                     <div class="content-item">
-                        <label for="Model">Model</label>
+                        <label for="s2">Model</label>
                         <select name="s2" id="s2">
                             <option value="0" selected id="0">Any</option>
 
@@ -220,13 +220,14 @@
 
                     <!--Car Price Option-->
                     <div class="content-item">
-                        <label for="Price">Total Price</label>
+                        <label for="s3">Total Price</label>
                         <select name="s3" id="s3">
                             <option value="0" selected id="0">Any</option>
-                            <option value="£2000-£10000" id="1">£2000-£10000</option>
-                            <option value="£10000-£20000" id="2">£10000-£20000</option>
-                            <option value="£20000-£50000" id="3">£20000-£50000</option>
-                            <option value="£50000+" id="4">£50000+</option>
+                            <option value="2000-10000" id="1">£2000-£10000</option>
+                            <option value="10000-20000" id="2">£10000-£20000</option>
+                            <option value="20000-50000" id="3">£20000-£50000</option>
+                            <option value=£50000" id="4">£50000+</option>
+                          </optgroup>
                         </select>
                     </div>
 
