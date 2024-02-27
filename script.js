@@ -60,11 +60,13 @@ function addItem(e) {
         const wishDiv = document.createElement("div");
         wishDiv.setAttribute("id", "wish" + productId);
         wishDiv.setAttribute("class", "product");
+        wishDiv.setAttribute("style", "margin-bottom: 10px;")
         wishDiv.innerHTML = productDiv.innerHTML;
 
         const removeBtn = document.createElement("input");
         removeBtn.setAttribute("type", "button");
-        removeBtn.setAttribute("value", "remove")
+        removeBtn.setAttribute("value", "Remove");
+        removeBtn.setAttribute("class", "removebut");
         removeBtn.onclick = function() {removeItem(productId)};
         wishDiv.appendChild(removeBtn);
 

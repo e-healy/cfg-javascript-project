@@ -50,14 +50,8 @@ body {
     position: relative;
 }
 
-.quantity {
-    background-color: red;
-    border-radius: 50%;
-    color: #fff;
-    position: absolute;
-    top: -5px;
-    left: 95%;
-    padding: 3px 8px;
+aside {
+    grid-area: aside;
 }
 
 .wishlist-card {
@@ -67,6 +61,7 @@ body {
     left: 100%;
     width: 500px;
     background-color: rgb(66, 47, 141);
+    opacity: 0.98;
     height: 100vh;
     transition: 0.3s;
 }
@@ -117,8 +112,18 @@ body {
     align-items: center;
     cursor: pointer;
   }
-  
 
+  .removebut {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ffe6f7;
+    border: 1px solid rgba(213, 28, 28, 0.2);
+    box-shadow: 1px 1px 6px rgba(213, 28, 28, 0.2);
+  }
 
 
 /* Car Form */
