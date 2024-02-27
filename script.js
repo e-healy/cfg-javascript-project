@@ -53,7 +53,7 @@ function setup() {
 
 function addItem(e) {
     const productId = e.target.getAttribute("id");
-
+const checkOutbuttons= document.getElementById("wishlist-checkOut")
     if(!wishList.find(item => item === productId)) {
         const productDiv = document.getElementById("product" + productId);
 
@@ -71,7 +71,8 @@ function addItem(e) {
         wishDiv.appendChild(removeBtn);
 
         let aside = document.getElementById('wishlist');
-        aside.appendChild(wishDiv);
+        aside.insertBefore(wishDiv, checkOutbuttons)
+    
 
         wishList.push(productId);
         console.log(wishList);
