@@ -10,12 +10,81 @@ btnScrollToTop.addEventListener("click", function () {
 });
 
 // Greeting when opening page
-let myname = prompt("Welcome to Auto Whiz! What's your name?");
-if (myname != null){
-    {alert("Hello " + myname + "! 😊 Use our form below to find your ideal car")};
-} else {
-    {alert("Hello my friend! 😊 Use our form below to find your ideal car")};
-};
+// let myname = prompt("Welcome to Auto Whiz! What's your name?");
+// if (myname != null){
+//     {alert("Hello " + myname + "! 😊 Use our form below to find your ideal car")};
+// } else {
+//     {alert("Hello my friend! 😊 Use our form below to find your ideal car")};
+// };
+
+// Nav Bar with Wishlist
+
+//Open and close shopping aside
+let body = document.querySelector('body');
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+
+openShopping.addEventListener('click', () => {
+    body.classList.add('active');
+});
+closeShopping.addEventListener('click', () => {
+    body.classList.remove('active');
+});
+
+// Buy Car
+let buyCar = document.querySelector('.total');
+
+buyCar.addEventListener('click', () => {
+    alert("Thanks for shopping with us! We hope you enjoy your new car!");
+})
+
+
+// wishlist button setup
+let wishList = [];
+
+function setup() { 
+    const products = document.querySelectorAll(".card-btn")
+    for(let i=0; i < products.length; i++) {
+        products[i].onclick = function(e) {
+            addItem(e);
+        }
+    }
+}
+
+function addItem(e) {
+    const productId = e.target.getAttribute("id");
+
+    if(!wishList.find(item => item === productId)) {
+        const productDiv = document.getElementById("product" + productId);
+
+        const wishDiv = document.createElement("div");
+        wishDiv.setAttribute("id", "wish" + productId);
+        wishDiv.setAttribute("class", "product");
+        wishDiv.innerHTML = productDiv.innerHTML;
+
+        const removeBtn = document.createElement("input");
+        removeBtn.setAttribute("type", "button");
+        removeBtn.setAttribute("value", "remove")
+        removeBtn.onclick = function() {removeItem(productId)};
+        wishDiv.appendChild(removeBtn);
+
+        let aside = document.getElementById('wishlist');
+        aside.appendChild(wishDiv);
+
+        wishList.push(productId);
+        console.log(wishList);
+    };
+    alert("Your item has been added to your wishlist");
+}
+
+function removeItem(productId) {
+    const product = document.getElementById("wish" + productId);
+    product.remove();
+    wishList = wishList.filter(item => item !== productId);
+    console.log(wishList);
+}
+
+window.addEventListener("load", setup);
 
 
 // Alters model options by what car make you pick

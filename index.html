@@ -17,6 +17,28 @@
     
     <body>
         <div class="main-content-wrapper">
+
+            <nav class="navbar">
+                <div class="nav-item">
+                </div> 
+                <div class="nav-item">
+                    <div class="shopping">
+                        <i class='bx bx-heart'></i>
+                    </div>
+                    <div class="shopping">
+                        <h2>Your Wishlist</h2>
+                    </div>
+                </div>
+            </nav>
+
+            <aside class="wishlist-card" id="wishlist">
+                <h1>Your wishlist:</h1>
+                <div class="checkOut">
+                    <div class="total">Buy Now</div>
+                    <div class="closeShopping">Close</div>
+                </div>
+            </aside>
+
             <header class="header">
                 <h1>AUTO WHIZ</h1>
             </header>
@@ -210,7 +232,7 @@
 
                     <!--Form buttons - Submit and Reset-->
                     <div class="form-btns">
-                        <input type="button" value="Submit" name="Search" id="Search" onclick="handleSubmit()">
+                        <input type="button" value="Search" name="Search" id="Search" onclick="handleSubmit()">
                         <input type="button" value="Reset" name="reset" id="Reset" onclick="handleReset()">
                     </div>
                 </form>
@@ -225,7 +247,6 @@
 
                 <div class="product-title">
                     <h1>OUR CARS</h1>
-                    <p>Explore some of our cars you might like</p>
                 </div>
     
     
@@ -233,11 +254,11 @@
     
                     <!--Audi Products-->
     
-                    <div class="product" id="product1" data-make="Audi" data-model-type="A3">
+                    <div class="product" id="product0" data-make="Audi" data-model-type="A3">
                         <img class="card-img" src="./img/Audi_A3_9095_i.jpg" alt="Audi A3"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="0" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £9095</h3>
                             </div>
                             <p class="card-text">Make: Audi</p>
@@ -245,11 +266,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Audi" data-make="Audi" data-model-type="E-tron">
+                    <div class="product" id="product1" data-make="Audi" data-model-type="E-tron">
                         <img class="card-img" src="./img/Audi_E_tron_35000.jpg" alt="Audi Etron"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="1" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £35000</h3>
                             </div>
                             <p class="card-text">Make: Audi</p>
@@ -257,11 +278,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Audi" data-make="Audi" data-model-type="Q5">
+                    <div class="product" id="product2" data-make="Audi" data-model-type="Q5">
                         <img class="card-img" src="./img/Audi_Q5_33995.jpg" alt="Audi Q5"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="2" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £33995</h3>
                             </div>
                             <p class="card-text">Make: Audi</p>
@@ -269,11 +290,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Audi" data-make="Audi" data-model-type="RS7">
+                    <div class="product" id="product3" data-make="Audi" data-model-type="RS7">
                         <img class="card-img" src="./img/Audi_Rs7_37450.jpg" alt="Audi RS7"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="3" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £37450</h3>
                             </div>
                             <p class="card-text">Make: Audi</p>
@@ -281,11 +302,11 @@
                         </div>
                     </div>
     
-                    <div class="product " id="product Audi" data-make="Audi" data-model-type="TT">
+                    <div class="product " id="product4" data-make="Audi" data-model-type="TT">
                         <img class="card-img" src="./img/Audi_TT_24990.jpg" alt="Audi TT"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="4" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £19000</h3>
                             </div>
                             <p class="card-text">Make: Audi</p>
@@ -294,11 +315,11 @@
                     </div>
     
                     <!--BMW Products-->
-                    <div class="product" id="product BMW" data-make="BMW" data-model-type="Z3">
+                    <div class="product" id="product5" data-make="BMW" data-model-type="Z3">
                         <img class="card-img" src="./img/BMW_z3_7950.jpg" alt="BMW Z3"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="5" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £7500</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
@@ -306,11 +327,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product BMW" data-make="BMW" data-model-type="M6">
+                    <div class="product" id="product6" data-make="BMW" data-model-type="M6">
                         <img class="card-img" src="./img/thumbnail_BMW_M6_12995.jpg" alt="BMW M6"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="6" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £12995</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
@@ -318,11 +339,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product BMW" data-make="BMW" data-model-type="X5">
+                    <div class="product" id="product7" data-make="BMW" data-model-type="X5">
                         <img class="card-img" src="./img/thumbnail_BMW_x5_48995.jpg" alt="BMW X5"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="7" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £48995</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
@@ -330,11 +351,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product BMW" data-make="BMW" data-model-type="i7">
+                    <div class="product" id="product8" data-make="BMW" data-model-type="i7">
                         <img class="card-img" src="./img/BMW_i7_118355.jpg" alt="BMW i7"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="8" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £118355</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
@@ -342,11 +363,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product BMW" data-make="BMW" data-model-type="Alpina B8">
+                    <div class="product" id="product9" data-make="BMW" data-model-type="Alpina B8">
                         <img class="card-img" src="./img/thumbnail_BMW_alpina_22995.jpg" alt="BMW Alpina"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="9" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £22995</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
@@ -354,11 +375,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product BMW" data-make="BMW" data-model-type="3 Series">
+                    <div class="product" id="product10" data-make="BMW" data-model-type="3 Series">
                         <img class="card-img" src="./img/thumbnail_BMW_3_series_10395.jpg" alt="BMW 3 Series"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="10" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £10395</h3>
                             </div>
                             <p class="card-text">Make: BMW</p>
@@ -369,11 +390,11 @@
     
                     <!--Chrysler Car Models-->
     
-                    <div class="product" id="product Chrysler" data-make="Chrysler" data-model-type="300C">
+                    <div class="product" id="product11" data-make="Chrysler" data-model-type="300C">
                         <img class="card-img" src="./img/thumbnail_Chrysler_300C_8995.jpg" alt="Chrysler 300C"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="11" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £8995</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
@@ -381,11 +402,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Chrysler" data-make="Chrysler" data-model-type="Crossfire">
+                    <div class="product" id="product12" data-make="Chrysler" data-model-type="Crossfire">
                         <img class="card-img" src="./img/Chrysler_crossfire_7500.jpg" alt="Chrysler Crossfire"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="12" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £7500</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
@@ -393,11 +414,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Chrysler" data-make="Chrysler" data-model-type="Delta">
+                    <div class="product" id="product13" data-make="Chrysler" data-model-type="Delta">
                         <img class="card-img" src="./img/Chrysler_Delta_3899.jpg" alt="Chrysler Delta"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="13" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £3899</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
@@ -405,11 +426,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Chrysler" data-make="Chrysler" data-model-type="Grand Voyager">
+                    <div class="product" id="product14" data-make="Chrysler" data-model-type="Grand Voyager">
                         <img class="card-img" src="./img/Chrysler_voyager_2495.jpg" alt="Chrysler Voyager"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="14" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £2495</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
@@ -417,11 +438,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Chrysler" data-make="Chrysler" data-model-type="PT Cruiser">
+                    <div class="product" id="product15" data-make="Chrysler" data-model-type="PT Cruiser">
                         <img class="card-img" src="./img/Chrysler_PT_Cruiser_2250.jpg" alt="Chrysler PT Cruiser"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="15" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £2250</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
@@ -429,11 +450,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Chrysler" data-make="Chrysler" data-model-type="Ypsilon">
+                    <div class="product" id="product16" data-make="Chrysler" data-model-type="Ypsilon">
                         <img class="card-img" src="./img/Chrysler_ypsilon_2390.jpg" alt="Chrysler Ypsilon"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="16" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £2390</h3>
                             </div>
                             <p class="card-text">Make: Chrysler</p>
@@ -442,11 +463,11 @@
                     </div>
     
                     <!--Ford Car Models-->
-                    <div class="product" id="product Ford" data-make="Ford" data-model-type="B-Max">
+                    <div class="product" id="product17" data-make="Ford" data-model-type="B-Max">
                         <img class="card-img" src="./img/thumbnail_Ford_B_Max_4490.jpg" alt="Ford B Max"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="17" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £4490</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
@@ -454,11 +475,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Ford" data-make="Ford" data-model-type="C-Max">
+                    <div class="product" id="product18" data-make="Ford" data-model-type="C-Max">
                         <img class="card-img" src="./img/thumbnail_Ford_c_Max_8399.jpg" alt="Ford C Max"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="18" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £8399</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
@@ -466,11 +487,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Ford" data-make="Ford" data-model-type="Escape">
+                    <div class="product" id="product19" data-make="Ford" data-model-type="Escape">
                         <img class="card-img" src="./img/thumbnail_Ford-Escape_4800.jpg" alt="Ford Escape"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="19" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £4800</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
@@ -478,11 +499,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Ford" data-make="Ford" data-model-type="Fiesta">
+                    <div class="product" id="product20" data-make="Ford" data-model-type="Fiesta">
                         <img class="card-img" src="./img/Ford_Fiesta_8694.jpg" alt="Ford Fiesta"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="20" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £8694</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
@@ -490,11 +511,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Ford" data-make="Ford" data-model-type="Focus">
+                    <div class="product" id="product21" data-make="Ford" data-model-type="Focus">
                         <img class="card-img" src="./img/Ford_focus_13500.jpg" alt="Ford Focus"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="21" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £13500</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
@@ -502,11 +523,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product Ford" data-make="Ford" data-model-type="Mustang Mach-E">
+                    <div class="product" id="product22" data-make="Ford" data-model-type="Mustang Mach-E">
                         <img class="card-img" src="./img/Ford_Mustang_21989.jpg" alt="Ford Mustang"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="22" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £21989</h3>
                             </div>
                             <p class="card-text">Make: Ford</p>
@@ -515,11 +536,11 @@
                     </div>
     
                     <!--Honda Car Models-->
-                    <div class="product" id="product" data-make="Honda" data-model-type="Accord">
+                    <div class="product" id="product23" data-make="Honda" data-model-type="Accord">
                         <img class="card-img" src="./img/Honda_accord_9425.jpg" alt="Honda Accord"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="23" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £9425</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
@@ -527,11 +548,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Honda" data-model-type="Civic">
+                    <div class="product" id="product24" data-make="Honda" data-model-type="Civic">
                         <img class="card-img" src="./img/Honda_Civic_54950.jpg" alt="Honda Civic"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="24" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £28000</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
@@ -539,11 +560,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Honda" data-model-type="CR-X">
+                    <div class="product" id="product25" data-make="Honda" data-model-type="CR-X">
                         <img class="card-img" src="./img/Honda_CR_x_9999.jpg" alt="Honda CR-X"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="25" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £9999</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
@@ -551,11 +572,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Honda" data-model-type="HR-V">
+                    <div class="product" id="product26" data-make="Honda" data-model-type="HR-V">
                         <img class="card-img" src="./img/Honda_HR_V_37270.jpg" alt="Honda HR-V"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="26" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £37270</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
@@ -563,11 +584,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Honda" data-model-type="Jazz">
+                    <div class="product" id="product27" data-make="Honda" data-model-type="Jazz">
                         <img class="card-img" src="./img/Honda_jazz_29125.jpg" alt="Honda Jazz"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="27" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £29125</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
@@ -575,11 +596,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Honda" data-model-type="ZR-V">
+                    <div class="product" id="product28" data-make="Honda" data-model-type="ZR-V">
                         <img class="card-img" src="./img/Honda_ZR_V_39495.jpg" alt="Honda ZR-V"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="28" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £39495</h3>
                             </div>
                             <p class="card-text">Make: Honda</p>
@@ -588,11 +609,11 @@
                     </div>
     
                     <!--Hyundai Car Models-->
-                    <div class="product" id="product" data-make="Hyundai" data-model-type="Bayon">
+                    <div class="product" id="product29" data-make="Hyundai" data-model-type="Bayon">
                         <img class="card-img" src="./img/Hyundai_bayon_22420.jpg" alt="Hyundai Bayon"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="29" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £22420</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
@@ -600,11 +621,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Hyundai" data-model-type="i20">
+                    <div class="product" id="product30" data-make="Hyundai" data-model-type="i20">
                         <img class="card-img" src="./img/Hyundai_I_20_27030.jpg" alt="Hyundai i-20"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="30" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £27030</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
@@ -612,11 +633,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Hyundai" data-model-type="i30">
+                    <div class="product" id="product31" data-make="Hyundai" data-model-type="i30">
                         <img class="card-img" src="./img/thumbnail_Hyundai_i_30_32995.jpg" alt="Hyundai i-30"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="31" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £32995</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
@@ -624,11 +645,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Hyundai" data-model-type="IONIQ">
+                    <div class="product" id="product32" data-make="Hyundai" data-model-type="IONIQ">
                         <img class="card-img" src="./img/Hyundai_IONIQ_14990.jpg" alt="Hyundai IONIQ"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="32" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £14990</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
@@ -636,11 +657,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Hyundai" data-model-type="Kona">
+                    <div class="product" id="product33" data-make="Hyundai" data-model-type="Kona">
                         <img class="card-img" src="./img/Hyunday_KONa_25495.jpg" alt="Hyundai KONA"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="33" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £25495</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
@@ -648,11 +669,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Hyundai" data-model-type="TUSCON">
+                    <div class="product" id="product34" data-make="Hyundai" data-model-type="TUSCON">
                         <img class="card-img" src="./img/Hyundai_TUSCON_8500.jpg" alt="Hyundai TUSCON"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="34" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £8500</h3>
                             </div>
                             <p class="card-text">Make: Hyundai</p>
@@ -661,11 +682,11 @@
                     </div>
     
                     <!--Jaguar Car Models-->
-                    <div class="product" id="product" data-make="Jaguar" data-model-type="E-PACE">
+                    <div class="product" id="product35" data-make="Jaguar" data-model-type="E-PACE">
                         <img class="card-img" src="./img/Jaguar_E_pace_9989.jpg" alt="Jaguar E-PACE"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="35" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £9989</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
@@ -673,11 +694,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Jaguar" data-model-type="XE">
+                    <div class="product" id="product36" data-make="Jaguar" data-model-type="XE">
                         <img class="card-img" src="./img/Jaguar_xe_3500.jpg" alt="Jaguar XE"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="36" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £3500</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
@@ -685,11 +706,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Jaguar" data-model-type="XF">
+                    <div class="product" id="product37" data-make="Jaguar" data-model-type="XF">
                         <img class="card-img" src="./img/Jaguar_xf_52430.jpg" alt="Jaguar XF"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="37" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £52430</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
@@ -697,11 +718,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Jaguar" data-model-type="F-PACE">
+                    <div class="product" id="product38" data-make="Jaguar" data-model-type="F-PACE">
                         <img class="card-img" src="./img/Jaguar_F_PACE_10990.jpg" alt="Jaguar F-Pace"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="38" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £10990</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
@@ -709,11 +730,11 @@
                         </div>
                     </div>
                     
-                    <div class="product" id="product" data-make="Jaguar" data-model-type="XKR">
+                    <div class="product" id="product39" data-make="Jaguar" data-model-type="XKR">
                         <img class="card-img" src="./img/Jaguar_XKR_8450.jpg" alt="Jaguar XKR"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="39" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £8450</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
@@ -721,11 +742,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Jaguar" data-model-type="X-Type">
+                    <div class="product" id="product40" data-make="Jaguar" data-model-type="X-Type">
                         <img class="card-img" src="./img/thumbnail_Jaguar_x_type_4495.jpg" alt="Jaguar X-Type"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="40" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £4495</h3>
                             </div>
                             <p class="card-text">Make: Jaguar</p>
@@ -734,11 +755,11 @@
                     </div>
     
                     <!--Kia Car Models-->
-                    <div class="product" id="product" data-make="Kia" data-model-type="Ceed">
+                    <div class="product" id="product41" data-make="Kia" data-model-type="Ceed">
                         <img class="card-img" src="./img/KIA_Ceed_2225.jpg" alt="KIA Ceed"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="41" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £2225</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
@@ -746,11 +767,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Kia" data-model-type="Picanto">
+                    <div class="product" id="product42" data-make="Kia" data-model-type="Picanto">
                         <img class="card-img" src="./img/KIA_picanto_2100.jpg" alt="KIA Picanto"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="42" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £2100</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
@@ -758,11 +779,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Kia" data-model-type="Sportage">
+                    <div class="product" id="product43" data-make="Kia" data-model-type="Sportage">
                         <img class="card-img" src="./img/KIA_Sportage_41995.jpg" alt="KIA Sportage"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="43" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £41995</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
@@ -770,11 +791,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Kia" data-model-type="Stonic">
+                    <div class="product" id="product44" data-make="Kia" data-model-type="Stonic">
                         <img class="card-img" src="./img/KIA_stonic_26375.jpg" alt="KIA Stonic"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="44" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £26375</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
@@ -782,11 +803,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Kia" data-model-type="Venga">
+                    <div class="product" id="product45" data-make="Kia" data-model-type="Venga">
                         <img class="card-img" src="./img/KIA_Venga_11995.jpg" alt="KIA Venga"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="45" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £11995</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
@@ -794,11 +815,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Kia" data-model-type="XCeed">
+                    <div class="product" id="product46" data-make="Kia" data-model-type="XCeed">
                         <img class="card-img" src="./img/KIA_xceed_13750.jpg" alt="KIA XCeed"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="46" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £13750</h3>
                             </div>
                             <p class="card-text">Make: KIA</p>
@@ -807,11 +828,11 @@
                     </div>
     
                     <!--Lexus Car Models-->
-                    <div class="product" id="product" data-make="Lexus" data-model-type="CT">
+                    <div class="product" id="product47" data-make="Lexus" data-model-type="CT">
                         <img class="card-img" src="./img/thumbnail_Lexus_CT_6795.jpg" alt="Lexus CT"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="47" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £6795</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
@@ -819,11 +840,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Lexus" data-model-type="ES">
+                    <div class="product" id="product48" data-make="Lexus" data-model-type="ES">
                         <img class="card-img" src="./img/Lexus_es_20430.jpg" alt="Lexus ES"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="48" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £20430</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
@@ -831,11 +852,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Lexus" data-model-type="IS">
+                    <div class="product" id="product49" data-make="Lexus" data-model-type="IS">
                         <img class="card-img" src="./img/Lexus_IS_2289.jpg" alt="Lexus IS"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="49" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £2289</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
@@ -843,11 +864,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Lexus" data-model-type="NX">
+                    <div class="product" id="product50" data-make="Lexus" data-model-type="NX">
                         <img class="card-img" src="./img/Lexus_nx_13490.jpg" alt="Lexus NX"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="50" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £13490</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
@@ -855,11 +876,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Lexus" data-model-type="RX">
+                    <div class="product" id="product51" data-make="Lexus" data-model-type="RX">
                         <img class="card-img" src="./img/Lexus_RX_51419.jpg" alt="Lexus RX"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="51" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £51419</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
@@ -867,11 +888,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Lexus" data-model-type="RXL">
+                    <div class="product" id="product52" data-make="Lexus" data-model-type="RXL">
                         <img class="card-img" src="./img/Lexus_rxl_41710.jpg" alt="Lexus RXL"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="52" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £41710</h3>
                             </div>
                             <p class="card-text">Make: Lexus</p>
@@ -880,11 +901,11 @@
                     </div>
     
                     <!--Mercedes Car Models-->
-                    <div class="product" id="product" data-make="Mercedes" data-model-type="A Class">
+                    <div class="product" id="product53" data-make="Mercedes" data-model-type="A Class">
                         <img class="card-img" src="./img/Mercedes_A_Class_3700.jpg" alt="Mercedes A Class"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="53" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £3700</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
@@ -892,11 +913,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Mercedes" data-model-type="C Class">
+                    <div class="product" id="product54" data-make="Mercedes" data-model-type="C Class">
                         <img class="card-img" src="./img/Mercedes_c_class_38495.jpg" alt="Mercedes C Class"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="54" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £38495</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
@@ -904,11 +925,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Mercedes" data-model-type="CLA Class">
+                    <div class="product" id="product55" data-make="Mercedes" data-model-type="CLA Class">
                         <img class="card-img" src="./img/Mercedes_CLA_Class_33253.jpg" alt="Mercedes CLA Class"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="55" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £33253</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
@@ -916,11 +937,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Mercedes" data-model-type="E Class">
+                    <div class="product" id="product56" data-make="Mercedes" data-model-type="E Class">
                         <img class="card-img" src="./img/Mercedes_e_class_88995.jpg" alt="Mercedes E Class"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="56" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £88995</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
@@ -928,11 +949,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Mercedes" data-model-type="GLA Class">
+                    <div class="product" id="product57" data-make="Mercedes" data-model-type="GLA Class">
                         <img class="card-img" src="./img/Mercedes_GLA_14999.jpg" alt="Mercedes GLA"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="57" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £14999</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
@@ -940,11 +961,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Mercedes" data-model-type="GLE">
+                    <div class="product" id="product58" data-make="Mercedes" data-model-type="GLE">
                         <img class="card-img" src="./img/thumbnail_Mercedes_gle_59000.jpg" alt="Mercedes GLE"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="58" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £59000</h3>
                             </div>
                             <p class="card-text">Make: Mercedes</p>
@@ -953,11 +974,11 @@
                     </div>
     
                     <!--Nissan Car Models-->
-                    <div class="product" id="product" data-make="Nissan" data-model-type="ARIYA">
+                    <div class="product" id="product59" data-make="Nissan" data-model-type="ARIYA">
                         <img class="card-img" src="./img/Nissan_ARIYA_36950.jpg" alt="Nissan ARIYA"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="59" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £36950</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
@@ -965,11 +986,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Nissan" data-model-type="Juke">
+                    <div class="product" id="product60" data-make="Nissan" data-model-type="Juke">
                         <img class="card-img" src="./img/Nissan_juke_3395.jpg" alt="Nissan Juke"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="60" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £3395</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
@@ -977,11 +998,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Nissan" data-model-type="Micra">
+                    <div class="product" id="product61" data-make="Nissan" data-model-type="Micra">
                         <img class="card-img" src="./img/Nissan_Micra_13995.jpg" alt="Nissan Micra"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="61" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £3395</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
@@ -989,11 +1010,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Nissan" data-model-type="Pulsar">
+                    <div class="product" id="product62" data-make="Nissan" data-model-type="Pulsar">
                         <img class="card-img" src="./img/thumbnail_Nissan_pulsar_20200.jpg" alt="Nissan Pulsar"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="62" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £20200</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
@@ -1001,11 +1022,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Nissan" data-model-type="Qashqai">
+                    <div class="product" id="product63" data-make="Nissan" data-model-type="Qashqai">
                         <img class="card-img" src="./img/Nissan_qashqai_37495.jpg" alt="Nissan Qashqai"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="63" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £37495</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
@@ -1013,11 +1034,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Nissan" data-model-type="X-Trail">
+                    <div class="product" id="product64" data-make="Nissan" data-model-type="X-Trail">
                         <img class="card-img" src="./img/Nissan_xtrail_40095.jpg" alt="Nissan X-Trail"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="64" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £40095</h3>
                             </div>
                             <p class="card-text">Make: Nissan</p>
@@ -1026,11 +1047,11 @@
                     </div>
     
                     <!--Seat Car Models-->
-                    <div class="product" id="product" data-make="Seat" data-model-type="Alhambra">
+                    <div class="product" id="product65" data-make="Seat" data-model-type="Alhambra">
                         <img class="card-img" src="./img/SEAT_alhambra_3299.jpg" alt="SEAT Alhambra"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="65" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £3299</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
@@ -1038,11 +1059,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Seat" data-model-type="Arona">
+                    <div class="product" id="product66" data-make="Seat" data-model-type="Arona">
                         <img class="card-img" src="./img/SEAT_Arona_6990.jpg" alt="SEAT Arona"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="66" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £6990</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
@@ -1050,11 +1071,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Seat" data-model-type="Ateca">
+                    <div class="product" id="product67" data-make="Seat" data-model-type="Ateca">
                         <img class="card-img" src="./img/SEAT_ateca_29950.jpg" alt="SEAT Ateca"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="67" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £29950</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
@@ -1062,11 +1083,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Seat" data-model-type="Ibiza">
+                    <div class="product" id="product68" data-make="Seat" data-model-type="Ibiza">
                         <img class="card-img" src="./img/SEAT_Ibiza_13995.jpg" alt="SEAT Ibiza"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="68" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £13995</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
@@ -1074,11 +1095,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Seat" data-model-type="Leon">
+                    <div class="product" id="product69" data-make="Seat" data-model-type="Leon">
                         <img class="card-img" src="./img/thumbnail_SEAT_leon_21495.jpg" alt="SEAT Leon"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="69" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £21495</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
@@ -1086,11 +1107,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Seat" data-model-type="Tarraco">
+                    <div class="product" id="product70" data-make="Seat" data-model-type="Tarraco">
                         <img class="card-img" src="./img/SEAT_tarraco_33995.jpg" alt="SEAT Tarraco"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="70" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £33995</h3>
                             </div>
                             <p class="card-text">Make: SEAT</p>
@@ -1099,11 +1120,11 @@
                     </div>
     
                     <!--Toyota Car Models-->
-                    <div class="product" id="product" data-make="Toyota" data-model-type="Auris">
+                    <div class="product" id="product71" data-make="Toyota" data-model-type="Auris">
                         <img class="card-img" src="./img/thumbnail_Toyota_Auris_9989.jpg" alt="Toyota Auris"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="71" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £9989</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
@@ -1111,11 +1132,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Toyota" data-model-type="AYGO">
+                    <div class="product" id="product72" data-make="Toyota" data-model-type="AYGO">
                         <img class="card-img" src="./img/Toyota_aygo_12987.jpg" alt="Toyota AYGO"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="72" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £12987</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
@@ -1123,11 +1144,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Toyota" data-model-type="Corolla">
+                    <div class="product" id="product73" data-make="Toyota" data-model-type="Corolla">
                         <img class="card-img" src="./img/Toyota_Corolla_29995.jpg" alt="Toyota Corolla"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="73" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £29995</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
@@ -1135,11 +1156,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Toyota" data-model-type="Estima">
+                    <div class="product" id="product74" data-make="Toyota" data-model-type="Estima">
                         <img class="card-img" src="./img/Toyota_estima_6495.jpg" alt="Toyota Estima"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="74" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £6495</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
@@ -1147,11 +1168,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Toyota" data-model-type="Prius">
+                    <div class="product" id="product75" data-make="Toyota" data-model-type="Prius">
                         <img class="card-img" src="./img/Toyota_Prius_23450.jpg" alt="Toyota Prius"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="75" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £23450</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
@@ -1159,11 +1180,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Toyota" data-model-type="Land Cruiser">
+                    <div class="product" id="product76" data-make="Toyota" data-model-type="Land Cruiser">
                         <img class="card-img" src="./img/Toyota_land_cruiser_57999.jpg" alt="Toyota Land Cruiser"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="76" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £57999</h3>
                             </div>
                             <p class="card-text">Make: Toyota</p>
@@ -1172,11 +1193,11 @@
                     </div>
     
                     <!--Vauxxall Car Models-->
-                    <div class="product" id="product" data-make="Vauxhall" data-model-type="Astra">
+                    <div class="product" id="product77" data-make="Vauxhall" data-model-type="Astra">
                         <img class="card-img" src="./img/Vauxhall_astra_26444.jpg" alt="Vauxhall Astra"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="77" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £26444</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
@@ -1184,11 +1205,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Vauxhall" data-model-type="Grandland X">
+                    <div class="product" id="product78" data-make="Vauxhall" data-model-type="Grandland X">
                         <img class="card-img" src="./img/thumbnail_Vauxhall_grandland_x_19249.jpg" alt="Vauxhall Grandland X"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="78" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £19249</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
@@ -1196,11 +1217,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Vauxhall" data-model-type="Corsa">
+                    <div class="product" id="product79" data-make="Vauxhall" data-model-type="Corsa">
                         <img class="card-img" src="./img/Vauxhall_Corsa_2995.jpg" alt="Vauxhall Corsa"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="79" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £2995</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
@@ -1208,11 +1229,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Vauxhall" data-model-type="Mokka">
+                    <div class="product" id="product80" data-make="Vauxhall" data-model-type="Mokka">
                         <img class="card-img" src="./img/Vauxhall_Mokka_8265.jpg" alt="Vauxhall Mokka"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="80" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £8265</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
@@ -1220,11 +1241,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Vauxhall" data-model-type="Vivaro-e Life">
+                    <div class="product" id="product81" data-make="Vauxhall" data-model-type="Vivaro-e Life">
                         <img class="card-img" src="./img/Vauxhall _vivaro-e_life_42950.jpg" alt="Vauxhall Vivaro-e Life"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="81" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £42950</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
@@ -1232,11 +1253,11 @@
                         </div>
                     </div>
     
-                    <div class="product" id="product" data-make="Vauxhall" data-model-type="Crossland">
+                    <div class="product" id="product82" data-make="Vauxhall" data-model-type="Crossland">
                         <img class="card-img" src="./img/Vauxhall_Crossland_16350.jpg" alt="Vauxhall Crossland"/>
                         <div class="card-content">
                             <div class="card-title">
-                                <button class="card-btn" type="button"><i class='bx bxs-heart'></i></button>
+                                <input class="card-btn" id="82" type="button" value="&#10084"/>
                                 <h3 class="card-header">Price: £16350</h3>
                             </div>
                             <p class="card-text">Make: Vauxhall</p>
