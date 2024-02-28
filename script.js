@@ -47,7 +47,7 @@ function setup() {
     for(let i=0; i < products.length; i++) {
         products[i].onclick = function(e) {
             addItem(e);
-        }
+        };
     }
 }
 
@@ -138,9 +138,9 @@ document.getElementById('Reset').addEventListener('click', handleReset);
 document.getElementById('calculate');
 
 // Event listeners for dropdown selections
-document.getElementById('s1').addEventListener('input', handleSelect);
-document.getElementById('s2').addEventListener('input', handleSelect);
-document.getElementById('s3').addEventListener('input', handleSelect);
+// document.getElementById('s1').addEventListener('input', handleSelect);
+// document.getElementById('s2').addEventListener('input', handleSelect);
+// document.getElementById('s3').addEventListener('input', handleSelect);
 
 // Form Reset Functionality
 function handleReset() {
@@ -151,34 +151,32 @@ function handleReset() {
     let products = document.querySelectorAll('.product');
     products.forEach(product => {
         product.style.display = 'grid';
-    })
-    
+    }) 
 }
 
 
-function handleSelect(e) {
-    let select = e.target;
-    console.log(select.value); // Log the selected value
+// function handleSelect(e) {
+//     let select = e.target;
+//     console.log(select.value); // Log the selected value
 
-    // Determine the dropdown based on the ID of the select element
-    switch (select.id) {
-        case 's1':
-            // Handle make selection
-            break;
-        case 's2':
-            // Handle model selection
-            break;
-        case 's3':
-            // Handle price selection
-            break;
-            default:
-            break;
-    }
-}
+//     // Determine the dropdown based on the ID of the select element
+//     switch (select.id) {
+//         case 's1':
+//             // Handle make selection
+//             break;
+//         case 's2':
+//             // Handle model selection
+//             break;
+//         case 's3':
+//             // Handle price selection
+//             break;
+//             default:
+//             break;
+//     }
+// }
 
 // Determine the enableSingleBrand function outside of handleSubmit
 function enableSingleBrand(answer) {
-    console.log(answer.value);
     const makeValue = answer.value;
 
     // Hide all product elements
@@ -196,8 +194,11 @@ function enableSingleBrand(answer) {
 
 // Determine the enableSingleModel function outside of handleSubmit
 function enableSingleModel(answer2) {
-    console.log(answer2.value);
     const modelValue = answer2.value;
+
+    if (modelValue === '0') {
+        return;
+    }
 
     // Hide all product elements
     const products = document.querySelectorAll('.product');
@@ -213,35 +214,59 @@ function enableSingleModel(answer2) {
 }
 
 // Determine the enableSinglePrice function outside of handleSubmit
-// function enableSinglePrice(answer3) {
-//     console.log(answer3.value);
-//     const priceValue = answer3.value;
+function enableSinglePrice(answer3) {
+    const priceValue = answer3.value;
+
+    const values = priceValue.split('-');
+    const valuesToCompare = values.map(value => {
+        return +value;
+    });
+
 
     // Hide all product elements
-    // const products = document.querySelectorAll('.product');
-    // products.forEach(product => {
-    //     product.style.display = 'none';
-    // });
+    const products = document.querySelectorAll('.product');
 
-    // Show products for the selected price
-//     const selectedPriceProducts = document.querySelectorAll(`.product[data-price-type="${priceValue}"]`);
-//     selectedPriceProducts.forEach(product => {
-//         product.style.display = 'block';
-//     });
-// }
+     products.forEach(product => {
+         if (product.style.display === 'none') {
+            return;
+        }
 
+        const cardHeader = product.getElementsByClassName('card-header')[0];
+        const carPrice = +cardHeader.getAttribute('data-price');
+
+        const smallNumber = valuesToCompare[0];
+        const bigNumber = valuesToCompare[1];
+
+
+        if (!bigNumber) { 
+            if (carPrice >= smallNumber) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+            return;
+        }
+
+        if (carPrice >= smallNumber && carPrice <= bigNumber) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+     });
+}
 
 function handleSubmit() {
     const makeSelect = document.getElementById('s1');
     const selectedMake = makeSelect.value;
     const modelSelect = document.getElementById('s2');
     const selectedModel = modelSelect.value;
-    // const priceSelect = document.getElementById('s3');
-    // const selectedPrice = priceSelect.value;
+    const priceSelect = document.getElementById('s3');
+    const selectedPrice = priceSelect.value;
     calculate.textContent = 'We found these cars for you! ✨'
 
-    // Call the enableSingleBrand function with the selected make
+//  Call the enableSingleBrand function with the selected make
     enableSingleBrand({ value: selectedMake});
     enableSingleModel({ value: selectedModel});
-    // enableSinglePrice({ value: selectedPrice});
+    enableSinglePrice({ value: selectedPrice});
+
 }
