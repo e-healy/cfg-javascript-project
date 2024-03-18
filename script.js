@@ -10,12 +10,12 @@ btnScrollToTop.addEventListener("click", function () {
 });
 
 // Greeting when opening page
-// let myname = prompt("Welcome to Auto Whiz! What's your name?");
-// if (myname != null){
-//     {alert("Hello " + myname + "! 😊 Use our form below to find your ideal car")};
-// } else {
-//     {alert("Hello my friend! 😊 Use our form below to find your ideal car")};
-// };
+let myname = prompt("Welcome to Auto Whiz! What's your name?");
+if (myname != null){
+    {alert("Hello " + myname + "! 😊 Use our form below to find your ideal car")};
+} else {
+    {alert("Hello my friend! 😊 Use our form below to find your ideal car")};
+};
 
 // Nav Bar with Wishlist
 
@@ -154,27 +154,6 @@ function handleReset() {
         product.style.display = 'grid';
     }) 
 }
-
-
-// function handleSelect(e) {
-//     let select = e.target;
-//     console.log(select.value); // Log the selected value
-
-//     // Determine the dropdown based on the ID of the select element
-//     switch (select.id) {
-//         case 's1':
-//             // Handle make selection
-//             break;
-//         case 's2':
-//             // Handle model selection
-//             break;
-//         case 's3':
-//             // Handle price selection
-//             break;
-//             default:
-//             break;
-//     }
-// }
 
 // Determine the enableSingleBrand function outside of handleSubmit
 function enableSingleBrand(answer) {
